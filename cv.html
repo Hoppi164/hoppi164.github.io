@@ -9,6 +9,12 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+	<style>
+		@page {
+			margin: 0;
+		}
+	</style>
 </head>
 
 <body class="bg-secondary d-flex flex-column min-vh-100">
@@ -29,12 +35,15 @@
 	</nav>
 
 	<div class="container bg-white flex-grow-1">
+
+
+		<!-- Top Bar -->
 		<div class="row bg-dark text-white border-bottom border-bottom-4 border-warning">
-			<div class="col-4"><img class="img-fluid rounded-circle" src="https://avatars0.githubusercontent.com/u/9586453?s=460&u=aff94f5b839987bbbd427c2297a3d5aa5f2589b1&v=4" alt=""></div>
+			<div class="col-4"><img class="img-fluid border border-warning rounded-circle" src="https://avatars0.githubusercontent.com/u/9586453?s=460&u=aff94f5b839987bbbd427c2297a3d5aa5f2589b1&v=4" alt=""></div>
 			<div class="col-8">
 				<h3>Andrew Hopkins</h3>
 				<h6>Fullstack Developer</h6>
-				<hr>
+				<hr class="bg-warning">
 				<h5>About Me</h5>
 				<p>
 					I'm an experienced developer with an enthusiasm for creating large scale, user-friendly, dynamic web applications.
@@ -42,48 +51,304 @@
 				<p>
 					I'm a pragmatic problem solver; I always take the most cost effective, direct approach.
 				</p>
-
 			</div>
 		</div>
 
+		<!-- Main Content -->
 		<div class="row bg-dark">
 
-			<!-- Languages -->
+			<!-- Side Bar -->
 			<div class="col-3">
 				<div class="row">
 
-					<div class="col-12">
+					<!-- Languages -->
+					<div class="col-12 my-2">
 						<div class="d-flex justify-content-between align-items-center text-center align-middle text-white">
 							<i class="far fa-comment-dots fa-2x"></i>
 							Languages
 						</div>
 					</div>
-
 					<div class="col-12">
 						<div class="row">
-							<span class="bg-warning text-white col-12 mb-1">Python</span>
-							<span class="bg-warning text-white col-12 mb-1">HTML</span>
-							<span class="bg-warning text-white col-12 mb-1">CSS</span>
-							<span class="bg-warning text-white col-12 mb-1">Javascript</span>
-							<span class="bg-warning text-white col-12 mb-1">PHP</span>
-							<span class="bg-warning text-white col-12 mb-1">C++</span>
-							<span class="bg-warning text-white col-12 mb-1">Java</span>
+							<span class="bg-warning col-12 my-1"><strong>Python</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>HTML</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>CSS</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>Javascript</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>PHP</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>C++</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>Java</strong></span>
+						</div>
+					</div>
+
+
+					<!-- Skills -->
+					<div class="col-12 my-2">
+						<div class="d-flex justify-content-between align-items-center text-center align-middle text-white">
+							<i class="fas fa-cogs fa-lg"></i>
+							Skills
 						</div>
 
 					</div>
+
+					<div class="col-12">
+						<div class="row">
+							<span class="bg-warning col-12 my-1"><strong>Web Development</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>Team Leadership</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>Machine Learning</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>Git Ops</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>API Development</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>Work Automation</strong></span>
+							<span class="bg-warning col-12 my-1"><strong>Linux Tools</strong></span>
+						</div>
+					</div>
+
+
+
+					<!-- Contact Details -->
+					<div class="col-12 my-2">
+						<div class="d-flex justify-content-between align-items-center text-center align-middle text-white">
+							<i class="far fa-address-card fa-lg"></i>
+							Contact Details
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="row">
+							<span class="bg-light col-12 my-1"><strong>
+									<i class="fas fa-phone"></i>
+									04 5592 7372</strong>
+							</span>
+							<span class="bg-light col-12 my-1"><strong>
+									<i class="far fa-envelope"></i>
+									<a href="mailto:andrew.hopkins3@alumni.griffithuni.edu.au">Email</a> </strong>
+							</span>
+							<span class="bg-light col-12 my-1"><strong>
+									<i class="fab fa-linkedin"></i>
+									<a href="https://goo.gl/eCNa28">LinkedIn</a></strong>
+							</span>
+							<span class="bg-light col-12 my-1"><strong>
+									<i class="fab fa-github"></i>
+									<a href="https://github.com/Hoppi164">Github</a></strong>
+							</span>
+							<span class="bg-light col-12 my-1"><strong>
+									<i class="fas fa-desktop"></i>
+									<a href="https://hoppi164.github.io/">Website</a></strong>
+							</span>
+						</div>
+					</div>
+
 				</div>
 
 
 
 			</div>
+
+
+
+			<!-- Right Side -->
+			<div class="col-9">
+				<div class="row bg-light">
+
+					<div class="col-2 bg-secondary">
+						&nbsp
+					</div>
+					<div class="col-10">
+						<div class="d-flex justify-content-center align-items-center">
+							Education & Professional Experience
+							<i class="fas fa-graduation-cap"></i>
+							<i class="fas fa-suitcase"></i>
+						</div>
+					</div>
+
+
+					<!-- Insane -->
+					<div class="col-2 bg-secondary">
+						<div class="row">
+							<div class="col-12 text-center">
+								<i class="fas fa-suitcase fa-lg"></i>
+							</div>
+							<div class="col-12 p-0 text-center">
+								<small>2018 - 2020</small>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-10 pl-4">
+						<h6>Lead Developer - <a href="https://www.insane.net.au/">Insane Technologies</a></h6>
+						<p>
+							<small>
+								Managed a team of web developers creating a data management platform, performed Web Development, Digital Forensics, Machine Learning, Cloud Computing and Workflow Automation.
+							</small>
+						</p>
+					</div>
+
+
+					<!-- GOLDOC -->
+					<div class="col-2 bg-secondary">
+						<div class="row">
+							<div class="col-12 text-center">
+								<i class="fas fa-suitcase fa-lg"></i>
+							</div>
+							<div class="col-12 p-0 text-center">
+								<small>2017 - 2018</small>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-10 pl-4">
+						<h6>Logistics Specialist - <a href="https://gc2018.com/">2018 Commonwealth Games</a></h6>
+						<p>
+							<small>
+								Management of an SAAS Database and provided logistical assistance for the Commonwealth Games using my technological knowledge of workflow automation.
+							</small>
+						</p>
+					</div>
+
+
+
+					<!-- PASS -->
+					<div class="col-2 bg-secondary">
+						<div class="row">
+							<div class="col-12 text-center">
+								<i class="fas fa-suitcase fa-lg"></i>
+							</div>
+							<div class="col-12 p-0 text-center">
+								<small>2015 - 2017</small>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-10 pl-4">
+						<h6>PASS Leader - <a href="https://www.griffith.edu.au/">Griffith University</a></h6>
+						<p>
+							<small>
+								As a PASS Leader I would teach a group of students. This required good subject knowledge and public speaking ability.
+							</small>
+						</p>
+					</div>
+
+
+
+
+					<!-- Griffith -->
+					<div class="col-2 bg-secondary">
+						<div class="row">
+							<div class="col-12 text-center">
+								<i class="fas fa-graduation-cap fa-lg"></i>
+							</div>
+							<div class="col-12 p-0 text-center">
+								<small>2014 - 2017</small>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-10 pl-4">
+						<h6>Bachelor of Information Technology - <a href="https://www.griffith.edu.au/">Griffith University</a></h6>
+						<p>
+							<small>
+								During my university studies I focused on learning as many programming languages and design concepts as possible. I was a constant high achiever.
+								<ul>
+									<li><a href="https://goo.gl/ynvjb4">Official Testamur</a></li>
+									<li><a href="https://goo.gl/WxFtQw">Academic Transcript</a></li>
+								</ul>
+							</small>
+						</p>
+					</div>
+
+
+
+
+					<!-- Tafe -->
+					<div class="col-2 bg-secondary">
+						<div class="row">
+							<div class="col-12 text-center">
+								<i class="fas fa-graduation-cap fa-lg"></i>
+							</div>
+							<div class="col-12 p-0 text-center">
+								<small>2011 - 2012</small>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-10 pl-4">
+						<h6>Cert II - <a href="https://www.tafensw.edu.au/">Grafton Tafe</a></h6>
+						<p>
+							<small>
+								The primary focus of this certificate was on database development, Microsoft Office tasks, and Web Development
+							</small>
+						</p>
+					</div>
+
+
+
+					<!-- HSC -->
+					<div class="col-2 bg-secondary">
+						<div class="row">
+							<div class="col-12 text-center">
+								<i class="fas fa-graduation-cap fa-lg"></i>
+							</div>
+							<div class="col-12 p-0 text-center">
+								<small>2010 - 2012</small>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-10 pl-4">
+						<h6>Higher School Certificate - <a href="https://sthgrafton-h.schools.nsw.gov.au/">South Grafton High School</a></h6>
+						<p>
+							<small>
+								I graduated highschool with Distinctions in all subjects my final year
+							</small>
+						</p>
+					</div>
+
+
+
+
+
+					<!-- Extra Curricular -->
+					<div class="col-2 bg-secondary">
+						<div class="row">
+							<div class="col-12 text-center">
+								<i class="fas fa-trophy fa-lg"></i>
+							</div>
+							<div class="col-12 p-0 text-center">
+								<small>2010 - 2012</small>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-10 pl-4">
+						<h6>Extracurricular Activities</h6>
+						<p>
+							<small>
+								<ul>
+									<li>Open Source Developer - Github</li>
+									<li>Student Treasurer - Griffith University Rubiks Cube Club</li>
+									<li>Student Volunteer - Griffith University Student Guild</li>
+									<li>Cadet Officer - 24 Army Cadet Unit</li>
+								</ul>
+
+
+							</small>
+						</p>
+					</div>
+
+
+
+
+				</div>
+			</div>
+
+
+
+
 		</div>
 
-		My CV Goes Here
 
 	</div>
 
-	<footer class="bg-dark">
-		footer
+	<footer class="bg-dark text-white text-center p-2 mt-4 d-print-none">
+		Andrew Hopkins
 	</footer>
 
 
