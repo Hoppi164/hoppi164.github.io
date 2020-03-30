@@ -13,11 +13,14 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 
-	<!-- Import Bootstrap CSS -->
+	<!-- Import CSS: Bootstrap, Fontawesome, Custom -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
 </head>
 
-<body class="bg-secondary d-flex flex-column min-vh-100">
+<body class="bg-secondary d-flex flex-column min-vh-100 text-center">
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-secondary">
@@ -46,33 +49,64 @@
 		<div class="row">
 			<div class="col-12 col-lg-6">
 				<a href="https://hoppi164.github.io/townGen/">Random DND Town Generator</a>
+				<div class="row text-muted p-3">
+					<div class="col"><i class="fab fa-2x fa-html5" data-toggle="tooltip" data-html="true" title="<a href='https://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>"></i></div>
+					<div class="col"><i class="fab fa-2x fa-css3-alt" data-toggle="tooltip" data-html="true" title="<a href='https://www.w3schools.com/css/'>CSS 3</a>"></i></div>
+					<div class="col"><i class="fab fa-2x fa-vuejs" data-toggle="tooltip" data-html="true" title="<a href='https://vuejs.org/'>Vue JS</a>"></i></div>
+					<div class="col"><i class="fab fa-2x fa-bootstrap" data-toggle="tooltip" data-html="true" title="<a href='https://getbootstrap.com/'>Bootstrap</a>"></i></div>
+					<div class="col"><i class="fab fa-2x fa-font-awesome" data-toggle="tooltip" data-html="true" title="<a href='https://fontawesome.com/'>Fontawesome</a>"></i></div>
+				</div>
 				<a href="https://hoppi164.github.io/townGen/">
-					<img class="img-fluid" src="/images/towngen.png">
+					<img class="img-fluid border" src="/images/towngen.png">
 				</a>
-				<p class="text-light text-center">A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't fleshed out yet.</p>
+				<p class="text-light">A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't fleshed out yet.</p>
 			</div>
 
 			<div class="col-12 col-lg-6">
 				<a href="https://hoppi164.github.io/alpine-todo/index.html">Todo App</a>
+				<div class="row text-muted p-3">
+					<div class="col"><i class="fab fa-2x fa-html5" data-toggle="tooltip" data-html="true" title="<a href='https://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>"></i></div>
+					<div class="col"><i class="fab fa-2x fa-css3-alt" data-toggle="tooltip" data-html="true" title="<a href='https://www.w3schools.com/css/'>CSS 3</a>"></i></div>
+					<div class="col"><i class="fas fa-2x fa-mountain" data-toggle="tooltip" data-html="true" title="<a href='https://github.com/alpinejs/alpine'>Alpine JS</a>"></i></div>
+					<div class="col"><i class="fab fa-2x fa-bootstrap" data-toggle="tooltip" data-html="true" title="<a href='https://getbootstrap.com/'>Bootstrap</a>"></i></div>
+					<div class="col"><i class="fab fa-2x fa-font-awesome" data-toggle="tooltip" data-html="true" title="<a href='https://fontawesome.com/'>Fontawesome</a>"></i></div>
+				</div>
 				<a href="https://hoppi164.github.io/alpine-todo/index.html">
-					<img class="img-fluid" src="/images/todo_list.png">
+					<img class="img-fluid border" src="/images/todo_list.png">
 				</a>
-				<p class="text-light text-center">A Sample TODO webapp to exhibit Alpine JS</p>
+				<p class="text-light">A Sample TODO webapp to exhibit Alpine JS</p>
 			</div>
 
 
 		</div>
 
 		<!-- Game Dev -->
+		<div class="row">
+			<div class="col-12 mt-5">
+				<hr>
+				<h5 class="text-light">Indie Game Development</h5>
+			</div>
+		</div>
 
-		<hr class="bg-light">
-		<h5 class="text-light">Indie Game Development</h5>
-		<a href="https://connect.unity.com/p/zombie-chase">Zombie Chase</a>
-		<a href="https://connect.unity.com/p/zombie-chase"><img class="img-fluid" src="/images/zombiechase.png"></a>
-		<p class="text-light text-center">
-			<span>A "running from zombies simulator" game.</span><br>
-			<span>You have no weapon, and no goal except: Escape.</span>
-		</p>
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<a href="https://connect.unity.com/p/zombie-chase">Zombie Chase</a>
+				<div class="row text-muted p-3">
+					<div class="col">
+						<i class="fab fa-2x fa-unity" data-toggle="tooltip" data-html="true" title="<a href='https://unity.com/'>Unity Game Engine</a>"></i>
+					</div>
+
+
+				</div>
+				<a href="https://connect.unity.com/p/zombie-chase"><img class="img-fluid border" src="/images/zombiechase.png"></a>
+				<p class="text-light">
+					<span>A "running from zombies simulator" game.</span><br>
+					<span>You have no weapon, and no goal except: Escape.</span>
+				</p>
+			</div>
+
+
+		</div>
 
 	</div>
 
@@ -83,4 +117,17 @@
 
 
 
-</body></html>
+	<script>
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip({
+				delay: {
+					hide: 1000
+				}
+			})
+		})
+
+	</script>
+
+</body>
+
+</html>
