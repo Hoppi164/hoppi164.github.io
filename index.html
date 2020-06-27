@@ -17,13 +17,27 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
+	<style>
+		.playfair {
+			font-family: Playfair Display;
+		}
+
+		.bg-code {
+			background-image:
+				linear-gradient(rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)),
+				url(images/background.png);
+			height: 87vh;
+		}
+
+	</style>
 
 </head>
 
-<body class="bg-secondary d-flex flex-column min-vh-100 text-center">
+<body class="d-flex bg-light flex-column min-vh-100 text-center">
 
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-secondary border-bottom">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-secondary fixed-top">
 		<a class="navbar-brand" href="https://hoppi164.github.io/">Hoppi164</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -37,91 +51,236 @@
 	</nav>
 
 	<!-- Content -->
-	<div class="container bg-dark flex-grow-1 py-4">
-
-		<!-- Web Apps -->
-		<div class="row">
-			<div class="col-12">
-				<h5 class="text-light">Web Apps</h5>
+	<div>
+		<div class="jumbotron mb-0 jumbotron-fluid bg-code d-flex align-items-center justify-content-center">
+			<div>
+				<h1 class="playfair text-white display-1">Andrew Hopkins</h1>
+				<h2 class="playfair text-white">A Software Developer You Can Rely On</h2>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-12 col-lg-6">
-				<a target='_blank' href="https://hoppi164.github.io/townGen/">Random DND Town Generator</a>
-				<div class="row text-muted p-3">
-					<div class="col"><i class="fab fa-2x fa-html5" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-css3-alt" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://www.w3schools.com/css/'>CSS 3</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-angular" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://angularjs.org/'>Angular JS</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-bootstrap" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://getbootstrap.com/'>Bootstrap</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-font-awesome" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://fontawesome.com/'>Fontawesome</a>"></i></div>
+
+
+
+
+		<div class="jumbotron mb-0 jumbotron-fluid bg-light">
+			<h1 class="display-4">About Me</h1>
+			<div class="container">
+				<div class="row">
+					<div class="col-3"></div>
+					<div class="col-6">
+						<img class="img-fluid border border-dark rounded-circle" src="https://avatars0.githubusercontent.com/u/9586453?s=460&u=aff94f5b839987bbbd427c2297a3d5aa5f2589b1&v=4" alt="Photograph">
+					</div>
+					<div class="col-3"></div>
+					<div class="col-12">
+						<p class="lead">
+							I'm an experienced fullstack developer with an enthusiasm for creating user-friendly web applications.
+						</p>
+						<hr>
+					</div>
 				</div>
-				<a target='_blank' href="https://hoppi164.github.io/townGen/">
-					<img class="img-fluid border" src="/images/towngen.png">
-				</a>
-				<p class="text-light">A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't fleshed out yet.</p>
 			</div>
+		</div>
 
-			<div class="col-12 col-lg-6">
-				<a target='_blank' href="https://hoppi164.github.io/alpine-todo/index.html">Todo App</a>
-				<div class="row text-muted p-3">
-					<div class="col"><i class="fab fa-2x fa-html5" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://www.w3schools.com/html/html5_intro.asp'>HTML 5</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-css3-alt" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://www.w3schools.com/css/'>CSS 3</a>"></i></div>
-					<div class="col"><i class="fas fa-2x fa-mountain" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://github.com/alpinejs/alpine'>Alpine JS</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-bootstrap" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://getbootstrap.com/'>Bootstrap</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-font-awesome" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://fontawesome.com/'>Fontawesome</a>"></i></div>
+
+
+
+
+		<div class="jumbotron jumbotron-fluid bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-4">
+						<p><b>HTML</b></p>
+						<i class="fab fa-html5 fa-3x"></i>
+					</div>
+					<div class="col-4">
+						<p><b>CSS</b></p>
+						<i class="fab fa-css3-alt fa-3x"></i>
+					</div>
+					<div class="col-4">
+						<p><b>Javascript</b></p>
+						<i class="fab fa-js fa-3x"></i>
+					</div>
+					<div class="col-12 my-5">
+						<br>
+					</div>
+					<div class="col-4">
+						<p><b>Fast</b></p>
+						<i class="fas fa-tachometer-alt fa-3x"></i>
+					</div>
+					<div class="col-4">
+						<p><b>Mobile Friendly</b></p>
+						<i class="fas fa-mobile-alt fa-3x"></i>
+					</div>
+					<div class="col-4">
+						<p><b>Creative</b></p>
+						<i class="fas fa-lightbulb fa-3x"></i>
+					</div>
 				</div>
-				<a target='_blank' href="https://hoppi164.github.io/alpine-todo/index.html">
-					<img class="img-fluid border" src="/images/todo_list.png">
-				</a>
-				<p class="text-light">A Sample TODO webapp to exhibit Alpine JS</p>
-			</div>
-
-
-		</div>
-
-		<!-- Game Dev -->
-		<div class="row">
-			<div class="col-12 mt-5">
-				<hr>
-				<h5 class="text-light">Indie Game Development</h5>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-12 col-lg-6">
-				<a target='_blank' href="https://connect.unity.com/p/zombie-chase">Zombie Chase</a>
-				<div class="row text-muted p-3">
-					<div class="col">
-						<i class="fab fa-2x fa-unity" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://unity.com/'>Unity Game Engine</a>"></i>
+
+
+
+
+		<div class="jumbotron jumbotron-fluid bg-white">
+			<div class="container">
+
+				<div class="col-12">
+					<h1 class="display-4">Language Proficiency</h1>
+
+					<h5 class="text-left mt-5">Frontend</h5>
+					<hr>
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								VUE JS
+							</b>
+						</div>
 					</div>
 
 
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								ANGULAR JS
+							</b>
+						</div>
+					</div>
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								REACT JS
+							</b>
+						</div>
+					</div>
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								SVELTE JS
+							</b>
+						</div>
+					</div>
+
+					<h5 class="text-left mt-5">Backend</h5>
+					<hr>
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								PYTHON
+							</b>
+						</div>
+					</div>
+
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								NODE JS
+							</b>
+						</div>
+					</div>
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								PHP
+							</b>
+						</div>
+					</div>
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								JAVA
+							</b>
+						</div>
+					</div>
+
+					<h5 class="text-left mt-5">Database</h5>
+					<hr>
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								FIREBASE
+							</b>
+						</div>
+					</div>
+
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								MYSQL
+							</b>
+						</div>
+					</div>
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								ELASTIC SEARCH
+							</b>
+						</div>
+					</div>
+
+					<div class="progress mb-3" style="height: 25px;">
+						<div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+							<b class="text-left px-5">
+								MONGO DB
+							</b>
+						</div>
+					</div>
 				</div>
-				<a target='_blank' href="https://connect.unity.com/p/zombie-chase"><img class="img-fluid border" src="/images/zombiechase.png"></a>
-				<p class="text-light">
-					<span>A "running from zombies simulator" game.</span><br>
-					<span>You have no weapon, and no goal except: Escape.</span>
-				</p>
+
 			</div>
-
-			<div class="col-12 col-lg-6">
-				<a target='_blank' href="https://hoppi164.github.io/hangman/">Hangman</a>
-				<div class="row text-muted p-3">
-					<div class="col"><i class="fab fa-2x fa-vuejs" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://vuejs.org/'>Vue JS</a>"></i></div>
-					<div class="col"><i class="fab fa-2x fa-bootstrap" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://getbootstrap.com/'>Bootstrap</a>"></i></div>
-					<div class="col"><i class="fas fa-2x fa-user-friends" data-toggle="tooltip" data-html="true" title="<a target='_blank' href='https://github.com/Hoppi164/hangman/graphs/contributors'>Collaboration</a>"></i></div>
-				</div>
-				<a target='_blank' href="https://hoppi164.github.io/hangman/"><img class="img-fluid border" src="/images/hangman.png"></a>
-				<p class="text-light">
-					<span>A web based rendition of the classic childrens game "Hangman".</span><br>
-					<span>Guess the word correctly or the man dies.</span>
-				</p>
-			</div>
-
-
 		</div>
 
+		<div class="jumbotron mb-0 jumbotron-fluid bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="display-4">Projects</h1>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Hangman Game</h5>
+						<a href="https://hoppi164.github.io/hangman/">
+							<img src="/images/hangman.png" alt="Hangman Game" class="img-fluid border border-dark">
+						</a>
+						<p>A web based rendition of the classic childrens game "Hangman". Guess the word correctly or the man dies.</p>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Random DND Town Generator</h5>
+						<a href="https://hoppi164.github.io/townGen/">
+							<img src="/images/towngen.png" alt="Town Generator" class="img-fluid border border-dark">
+						</a>
+						<p>A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't fleshed out yet.</p>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Todo App</h5>
+						<a href="https://hoppi164.github.io/alpine-todo/index.html">
+							<img src="/images/todo_list.png" alt="Todo App" class="img-fluid border border-dark">
+						</a>
+						<p>A Sample TODO webapp to exhibit Alpine JS.</p>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Zombie Chase Game</h5>
+						<a href="https://connect.unity.com/p/zombie-chase">
+							<img src="/images/zombiechase.png" alt="Zombie Chase Game" class="img-fluid border border-dark">
+						</a>
+						<p>A "running from zombies simulator" game. You have no weapon, and no goal except: Escape. </p>
+					</div>
+
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Footer -->
