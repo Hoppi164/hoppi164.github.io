@@ -7,16 +7,17 @@
 	<!-- To make mobile friendly -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Import Scripts: jQuery, popper, bootstrap, alpine -->
+	<!-- Import Scripts: jQuery, popper, bootstrap, alpine, aos -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-	<!-- Import CSS: Bootstrap, Fontawesome, Custom -->
+	<!-- Import CSS: Bootstrap, Fontawesome, aos, Custom -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<style>
 		.playfair {
 			font-family: Playfair Display;
@@ -29,7 +30,6 @@
 				url(images/background.png);
 			height: 87vh;
 		}
-
 	</style>
 
 </head>
@@ -89,30 +89,30 @@
 		<div class="jumbotron jumbotron-fluid bg-light">
 			<div class="container">
 				<div class="row">
-					<div class="col-4">
+					<div class="col-4" data-aos="fade-right">
 						<p><b>HTML</b></p>
 						<i class="fab fa-html5 fa-3x"></i>
 					</div>
-					<div class="col-4">
+					<div class="col-4" data-aos="fade-up">
 						<p><b>CSS</b></p>
 						<i class="fab fa-css3-alt fa-3x"></i>
 					</div>
-					<div class="col-4">
+					<div class="col-4" data-aos="fade-left">
 						<p><b>Javascript</b></p>
 						<i class="fab fa-js fa-3x"></i>
 					</div>
 					<div class="col-12 my-5">
 						<br>
 					</div>
-					<div class="col-4">
+					<div class="col-4" data-aos="fade-up-right">
 						<p><b>Fast</b></p>
 						<i class="fas fa-tachometer-alt fa-3x"></i>
 					</div>
-					<div class="col-4">
+					<div class="col-4" data-aos="fade-up">
 						<p><b>Mobile Friendly</b></p>
 						<i class="fas fa-mobile-alt fa-3x"></i>
 					</div>
-					<div class="col-4">
+					<div class="col-4" data-aos="fade-up-left">
 						<p><b>Creative</b></p>
 						<i class="fas fa-lightbulb fa-3x"></i>
 					</div>
@@ -133,7 +133,7 @@
 					<h5 class="text-left mt-5">Frontend</h5>
 					<hr>
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								VUE JS
 							</b>
@@ -142,7 +142,7 @@
 
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								ANGULAR JS
 							</b>
@@ -150,7 +150,7 @@
 					</div>
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								REACT JS
 							</b>
@@ -158,7 +158,7 @@
 					</div>
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								SVELTE JS
 							</b>
@@ -168,7 +168,7 @@
 					<h5 class="text-left mt-5">Backend</h5>
 					<hr>
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								PYTHON
 							</b>
@@ -177,7 +177,7 @@
 
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								NODE JS
 							</b>
@@ -185,7 +185,7 @@
 					</div>
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								PHP
 							</b>
@@ -193,7 +193,7 @@
 					</div>
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								JAVA
 							</b>
@@ -203,7 +203,7 @@
 					<h5 class="text-left mt-5">Database</h5>
 					<hr>
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								FIREBASE
 							</b>
@@ -212,7 +212,7 @@
 
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								MYSQL
 							</b>
@@ -220,7 +220,7 @@
 					</div>
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								ELASTIC SEARCH
 							</b>
@@ -228,7 +228,7 @@
 					</div>
 
 					<div class="progress mb-3" style="height: 25px;">
-						<div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+						<div data-aos="fade-right" class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
 							<b class="text-left px-5">
 								MONGO DB
 							</b>
@@ -298,9 +298,10 @@
 				}
 			})
 		})
-
 	</script>
 
-</body>
+	<script>
+		AOS.init();
+	</script>
 
-</html>
+</body></html>
