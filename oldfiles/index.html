@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hoppi164</title>
+
+	<!-- To make mobile friendly -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Import Scripts: jQuery, popper, bootstrap, alpine, aos -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<!-- Import CSS: Bootstrap, Fontawesome, aos, Custom -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<style>
+		.playfair {
+			font-family: Playfair Display;
+		}
+
+		.bg-code {
+			background-image:
+				linear-gradient(rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0.5)),
+				url(images/background.png);
+			height: 87vh;
+		}
+
+
+		.timeline {
+			list-style: none;
+			padding: 20px 0 20px;
+			position: relative;
+		}
+
+		.timeline:before {
+			top: 0;
+			bottom: 0;
+			position: absolute;
+			content: " ";
+			width: 3px;
+			background-color: #eeeeee;
+			left: 50%;
+			margin-left: -1.5px;
+		}
+
+		.timeline>li {
+			margin-bottom: 20px;
+			position: relative;
+		}
+
+		.timeline>li:before,
+		.timeline>li:after {
+			content: " ";
+			display: table;
+		}
+
+		.timeline>li:after {
+			clear: both;
+		}
+
+		.timeline>li:before,
+		.timeline>li:after {
+			content: " ";
+			display: table;
+		}
+
+		.timeline>li:after {
+			clear: both;
+		}
+
+		.timeline>li>.timeline-panel {
+			width: 46%;
+			float: left;
+			border: 1px solid #d4d4d4;
+			border-radius: 2px;
+			padding: 20px;
+			position: relative;
+			-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+			box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+		}
+
+		.timeline>li>.timeline-panel:before {
+			position: absolute;
+			top: 26px;
+			right: -15px;
+			display: inline-block;
+			border-top: 15px solid transparent;
+			border-left: 15px solid #ccc;
+			border-right: 0 solid #ccc;
+			border-bottom: 15px solid transparent;
+			content: " ";
+		}
+
+		.timeline>li>.timeline-panel:after {
+			position: absolute;
+			top: 27px;
+			right: -14px;
+			display: inline-block;
+			border-top: 14px solid transparent;
+			border-left: 14px solid #fff;
+			border-right: 0 solid #fff;
+			border-bottom: 14px solid transparent;
+			content: " ";
+		}
+
+		.timeline>li>.timeline-badge {
+			color: #fff;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 1.4em;
+			text-align: center;
+			position: absolute;
+			top: 16px;
+			left: 50%;
+			margin-left: -25px;
+			background-color: #999999;
+			z-index: 100;
+			border-top-right-radius: 50%;
+			border-top-left-radius: 50%;
+			border-bottom-right-radius: 50%;
+			border-bottom-left-radius: 50%;
+		}
+
+		.timeline>li.timeline-inverted>.timeline-panel {
+			float: right;
+		}
+
+		.timeline>li.timeline-inverted>.timeline-panel:before {
+			border-left-width: 0;
+			border-right-width: 15px;
+			left: -15px;
+			right: auto;
+		}
+
+		.timeline>li.timeline-inverted>.timeline-panel:after {
+			border-left-width: 0;
+			border-right-width: 14px;
+			left: -14px;
+			right: auto;
+		}
+
+		.timeline-badge.primary {
+			background-color: #2e6da4 !important;
+		}
+
+		.timeline-badge.success {
+			background-color: #3f903f !important;
+		}
+
+		.timeline-badge.warning {
+			background-color: #f0ad4e !important;
+		}
+
+		.timeline-badge.danger {
+			background-color: #d9534f !important;
+		}
+
+		.timeline-badge.info {
+			background-color: #5bc0de !important;
+		}
+
+		.timeline-title {
+			margin-top: 0;
+			color: inherit;
+		}
+
+		.timeline-body>p,
+		.timeline-body>ul {
+			margin-bottom: 0;
+		}
+
+		.timeline-body>p+p {
+			margin-top: 5px;
+		}
+	</style>
+
+</head>
+
+<body class="d-flex bg-light flex-column min-vh-100 text-center">
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-secondary fixed-top">
+		<a class="navbar-brand" href="https://hoppi164.github.io/">Hoppi164</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"> <a class="nav-link" href="/">Home</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="/cv.html">Curriculum Vitae</a> </li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Content -->
+	<div>
+
+		<div class="jumbotron mb-0 jumbotron-fluid bg-code d-flex align-items-center justify-content-center">
+			<div>
+				<h1 class="playfair text-white display-1">Andrew Hopkins</h1>
+				<h2 class="playfair text-white">A Software Developer You Can Rely On</h2>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="jumbotron mb-0 jumbotron-fluid bg-light">
+			<h1 class="display-4">About Me</h1>
+			<div class="container">
+				<div class="row">
+					<div class="col-3"></div>
+					<div class="col-6">
+						<img class="img-fluid border border-dark rounded-circle" src="https://avatars0.githubusercontent.com/u/9586453?s=460&u=aff94f5b839987bbbd427c2297a3d5aa5f2589b1&v=4" alt="Photograph">
+					</div>
+					<div class="col-3"></div>
+					<div class="col-12">
+						<p class="lead">
+							I'm an experienced fullstack developer with an enthusiasm for creating user-friendly web applications.
+						</p>
+						<hr>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="jumbotron jumbotron-fluid bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-4" data-aos="zoom-in">
+						<p><b>HTML</b></p>
+						<i class="fab fa-html5 fa-3x"></i>
+					</div>
+					<div class="col-4" data-aos="zoom-in">
+						<p><b>CSS</b></p>
+						<i class="fab fa-css3-alt fa-3x"></i>
+					</div>
+					<div class="col-4" data-aos="zoom-in">
+						<p><b>Javascript</b></p>
+						<i class="fab fa-js fa-3x"></i>
+					</div>
+					<div class="col-12 my-5">
+						<br>
+					</div>
+					<div class="col-4" data-aos="zoom-in">
+						<p><b>Fast</b></p>
+						<i class="fas fa-tachometer-alt fa-3x"></i>
+					</div>
+					<div class="col-4" data-aos="zoom-in">
+						<p><b>Mobile Friendly</b></p>
+						<i class="fas fa-mobile-alt fa-3x"></i>
+					</div>
+					<div class="col-4" data-aos="zoom-in">
+						<p><b>Creative</b></p>
+						<i class="fas fa-lightbulb fa-3x"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<div class="jumbotron jumbotron-fluid bg-white">
+			<div class="container">
+				<div class="row">
+
+
+					<div class="col-12">
+						<h1 class="display-4">Language Proficiency</h1>
+
+						<h5 class="text-left mt-5">Frontend</h5>
+						<hr>
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									VUE JS
+								</b>
+							</div>
+						</div>
+
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									ANGULAR JS
+								</b>
+							</div>
+						</div>
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									REACT JS
+								</b>
+							</div>
+						</div>
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									SVELTE JS
+								</b>
+							</div>
+						</div>
+
+						<h5 class="text-left mt-5">Backend</h5>
+						<hr>
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									PYTHON
+								</b>
+							</div>
+						</div>
+
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									NODE JS
+								</b>
+							</div>
+						</div>
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									PHP
+								</b>
+							</div>
+						</div>
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									JAVA
+								</b>
+							</div>
+						</div>
+
+						<h5 class="text-left mt-5">Database</h5>
+						<hr>
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									FIREBASE
+								</b>
+							</div>
+						</div>
+
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									MYSQL
+								</b>
+							</div>
+						</div>
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									ELASTIC SEARCH
+								</b>
+							</div>
+						</div>
+
+						<div class="progress mb-3" style="height: 25px;">
+							<div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+								<b class="text-left px-5">
+									MONGO DB
+								</b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="jumbotron mb-0 jumbotron-fluid bg-light">
+			<div class="container">
+				<h1 class="display-4">Timeline</h1>
+
+				<!--	Timeline Code adapted from: https://codepen.io/jasondavis/pen/fDGdK	-->
+				<ul class="timeline">
+					<li data-aos="flip-left">
+						<div class="timeline-badge success"><i class="fas fa-graduation-cap"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">High School Certificate</h4>
+								<p><small class="text-muted">2012</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>Graduated from South Grafton High School. High achieving student, with several extra-curricular activities.</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted" data-aos="flip-right" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge success"><i class="fas fa-graduation-cap"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Started University</h4>
+								<p><small class="text-muted">2014</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>During university I was nominated treasurer of the Griffith Cubing Association, and was an active member of the Outdoor Adventure Club</p>
+							</div>
+						</div>
+					</li>
+					<li data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">University Tutor</h4>
+								<p><small class="text-muted">2014</small></p>
+
+							</div>
+							<div class="timeline-body">
+								<p>During university I worked as a private tutor for students studying Software Development.</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted" data-aos="flip-right" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">PASS Leader</h4>
+								<p><small class="text-muted">2015</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>Working for Griffith University as "PASS Leader" I would Teach & Facilitate group workshops, for software development courses. </p>
+							</div>
+						</div>
+					</li>
+					<li data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Technology Intern</h4>
+								<p><small class="text-muted">2017</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>I interned with the Commonwealth Games where I Designed and implemented a database, managing the recruitment of 4000 security guards.</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted" data-aos="flip-right" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge success"><i class="fas fa-graduation-cap"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Graduated University</h4>
+								<p><small class="text-muted">2017</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>I Graduated Griffith University with a major in Software Development, Throughout my studies I was a constant high achiever.</p>
+							</div>
+						</div>
+					</li>
+					<li data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Logistics Specialist</h4>
+								<p><small class="text-muted">2018</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>After interning with the Commonwealth Games, I was offered employment assisting with the logistical operations of the security department.</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted" data-aos="flip-right" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Software Developer</h4>
+								<p><small class="text-muted">2018</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>I started working as a Fullstack Software Developer for "Insane Technologies".</p>
+								<ul style="list-style: initial" class="text-left">
+									<li>Python</li>
+									<li>Flask</li>
+									<li>Vue Js</li>
+									<li>Google App Engine</li>
+									<li>Google Firebase</li>
+									<li>Machine Learning</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li data-aos="flip-left" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Lead Developer</h4>
+								<p><small class="text-muted">2019</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>The business drastically expanded, and i was promoted to Lead Developer over a small project team, creating a data management platform for investigating data breaches</p>
+							</div>
+						</div>
+					</li>
+					<li class="timeline-inverted" data-aos="flip-right" data-aos-anchor-placement="bottom-bottom">
+						<div class="timeline-badge info"><i class="fas fa-briefcase"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">Database Admin</h4>
+								<p><small class="text-muted">2020</small></p>
+							</div>
+							<div class="timeline-body">
+								<p>After completing the project with Insane Technologies, I was hired by Bond University. Where i'm assisting with the integration of a fundraising database.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="jumbotron mb-0 jumbotron-fluid bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="display-4">Projects</h1>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Hangman Game</h5>
+						<a href="https://hoppi164.github.io/hangman/">
+							<img src="/images/hangman.png" alt="Hangman Game" class="img-fluid border border-dark">
+						</a>
+						<p>A web based rendition of the classic childrens game "Hangman". Guess the word correctly or the man dies.</p>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Random DND Town Generator</h5>
+						<a href="https://hoppi164.github.io/townGen/">
+							<img src="/images/towngen.png" alt="Town Generator" class="img-fluid border border-dark">
+						</a>
+						<p>A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't fleshed out yet.</p>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Todo App</h5>
+						<a href="https://hoppi164.github.io/alpine-todo/index.html">
+							<img src="/images/todo_list.png" alt="Todo App" class="img-fluid border border-dark">
+						</a>
+						<p>A Sample TODO webapp to exhibit Alpine JS.</p>
+					</div>
+
+					<div class="col-12 col-md-6 mt-5">
+						<h5>Zombie Chase Game</h5>
+						<a href="https://connect.unity.com/p/zombie-chase">
+							<img src="/images/zombiechase.png" alt="Zombie Chase Game" class="img-fluid border border-dark">
+						</a>
+						<p>A "running from zombies simulator" game. You have no weapon, and no goal except: Escape. </p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="bg-dark text-white">
+		Andrew Hopkins
+	</footer>
+
+
+
+	<script>
+		$(function() {
+			$('[data-toggle="popover"]').popover("show")
+		})
+	</script>
+
+	<script>
+		AOS.init();
+	</script>
+
+</body></html>
