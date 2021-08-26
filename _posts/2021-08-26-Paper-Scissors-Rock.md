@@ -95,7 +95,7 @@ play(rock, rock)
 <details>
 <summary>View Full Code</summary>
 
-<pre>
+<pre class="highlight">
 <code>
 
 var gamerules = {
