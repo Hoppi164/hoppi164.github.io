@@ -95,10 +95,9 @@ play(rock, rock)
 <details>
 <summary>View Full Code</summary>
 
+<pre>
+<code>
 
-
-
-```
 var gamerules = {
   scissors: { label: 'scissors' },
   paper:{ label: 'paper' },
@@ -140,7 +139,7 @@ play(rock, scissors)
 play(rock, paper)
 play(rock, rock)
 
-```
-
+</code>
+</pre>
 
 </details>
