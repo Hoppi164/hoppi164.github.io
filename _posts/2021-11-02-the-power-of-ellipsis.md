@@ -1,4 +1,3 @@
-# The Power Of Ellipsis
 Responsiveness is a concern that should be front and center for any modern front-end developer.  
 Your site should look brilliant on all screens; large and small
 
@@ -121,6 +120,7 @@ To accomplish this effect you can add this small CSS class to your code which sp
   overflow: hidden;
   max-width: 40ch;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>
 ```
