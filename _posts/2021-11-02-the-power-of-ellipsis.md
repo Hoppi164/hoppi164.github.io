@@ -133,9 +133,28 @@ you can then use this class within your html document like so:
 ```
 
 Alternatively if you are already using a frontend framework: there's a strong chance this class has already been implemented for you.  
-| Framework | Example Use |
-| ----------| ------------|
-| Bootstrap | `<p class="text-truncate"> very very very very very long text </p>` |
-| Quasar | `<p class="ellipsis"> very very very very very long text </p>` |
-| Tailwind | `<p class="truncate"> very very very very very long text </p>` |
+<table>
+  <thead>
+    <tr>
+      <th> Framework </th>
+      <th> Example Use </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td> Bootstrap </td>
+      <td> <pre> <code><p class="text-truncate"> very very very very very long text </p></code> </pre> </td>
+    </tr>
+    <tr>
+      <td> Quasar </td>
+      <td> <pre> <code><p class="ellipsis"> very very very very very long text </p></code> </pre> </td>
+    </tr>
+    <tr>
+      <td> Tailwind </td>
+      <td> <pre> <code><p class="truncate"> very very very very very long text </p></code> </pre> </td>
+    </tr>
+  </tbody>
+</table>
+
 
