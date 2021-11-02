@@ -78,29 +78,29 @@ You can see this in action with the sample below:
       <td> 0 </td>
       <td> Tony Stark </td>
       <td> Iron Man </td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> Genius level scientist with a Super Powered suit of armor </td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> JARVIS, make a note. Remind me not to wake up in the morning ever again. </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> Genius level scientist with a Super Powered suit of armor </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> JARVIS, make a note. Remind me not to wake up in the morning ever again. </td>
     </tr>
     <tr>
       <td> 1 </td>
       <td> Natasha Romanoff </td>
       <td> Black Widow </td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> Master in the covert arts of espionage, infiltration, and subterfuge </td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> "I Could Have Been More Famous Than Captain America" </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> Master in the covert arts of espionage, infiltration, and subterfuge </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> "I Could Have Been More Famous Than Captain America" </td>
     </tr>
     <tr>
       <td> 2 </td>
       <td> Carol Danvers </td>
       <td> Captain Marvel  </td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> Photon Energy absorbed from the Tesseract granting her enhanced strength, stamina, agility, durability, and flight </td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> "Higher, further, faster, baby.” </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> Photon Energy absorbed from the Tesseract granting her enhanced strength, stamina, agility, durability, and flight </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> "Higher, further, faster, baby.” </td>
     </tr>
     <tr>
       <td> 3 </td>
       <td> Peter Parker </td>
       <td> Spider-Man </td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> Abilities gained from radioactive spider bite: Superhuman strength, agility, endurance, ability to stick to and climb walls and other surfaces</td>
-      <td style="overflow: hidden; max-width: 40ch; text-overflow: ellipsis;"> "With great power, comes great responsibility." </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> Abilities gained from radioactive spider bite: Superhuman strength, agility, endurance, ability to stick to and climb walls and other surfaces</td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;"> "With great power, comes great responsibility." </td>
     </tr>
    
   </tbody>
