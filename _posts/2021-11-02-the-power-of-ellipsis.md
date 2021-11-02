@@ -144,15 +144,15 @@ Alternatively if you are already using a frontend framework: there's a strong ch
   <tbody>
     <tr>
       <td> Bootstrap </td>
-      <td> <pre> <code><p class="text-truncate"> very very very very very long text </p></code> </pre> </td>
+      <td> <pre> <code>&lt;p class="text-truncate"&gt; very very very very very long text &lt;/p&gt;</code> </pre> </td>
     </tr>
     <tr>
       <td> Quasar </td>
-      <td> <pre> <code><p class="ellipsis"> very very very very very long text </p></code> </pre> </td>
+      <td> <pre> <code>&lt;p class="ellipsis"&gt; very very very very very long text &lt;/p&gt;</code> </pre> </td>
     </tr>
     <tr>
       <td> Tailwind </td>
-      <td> <pre> <code><p class="truncate"> very very very very very long text </p></code> </pre> </td>
+      <td> <pre> <code>&lt;p class="truncate"&gt; very very very very very long text &lt;/p&gt;</code> </pre> </td>
     </tr>
   </tbody>
 </table>
