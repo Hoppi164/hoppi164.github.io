@@ -3,12 +3,12 @@ import { error } from '@sveltejs/kit';
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
 	try {
-		const post = await import(`/src/posts/${params.slug}.md`);
+		const allPosts = await import(`/src/posts/all-posts.js`);
 		return {
-			content: post.default,
-			...post.metadata
+			allPosts,
+			slug: params.slug
 		};
 	} catch (err) {
-		throw error(404, 'Not Found');
+		throw error(500, 'Post Index Not Found');
 	}
 }

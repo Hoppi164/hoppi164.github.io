@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Fizz Buzz
+date: '2020-09-13'
+slug: 'fizz-buzz'
 ---
 
 The "Fizz-Buzz test" is an interview question designed to filter out 90% of candidates who can't solve the simplest of problems.

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Better "If Statements"
+date: '2021-08-23'
+slug: 'better-if-statements'
 ---
 
 Don't use "if statements" with lots of possible outcomes!
