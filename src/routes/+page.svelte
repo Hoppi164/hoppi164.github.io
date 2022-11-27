@@ -5,6 +5,7 @@
 	import DashboardSpeed from '$lib/components/icons/dashboard-speed.svelte';
 	import LightBulbOn from '$lib/components/icons/light-bulb-on.svelte';
 	import SmartphoneDevice from '$lib/components/icons/smartphone-device.svelte';
+	import ProgressBar from '$lib/components/ProgressBar.svelte';
 </script>
 
 <div class="title-box">
@@ -56,13 +57,25 @@
 <h2>Language Proficiency</h2>
 <div class="language-proficiency">
 	<h3>Frontend</h3>
-	<div class="language-proficiency-group" />
+	<div class="language-proficiency-group">
+		<ProgressBar label="VUE" value="95" />
+		<ProgressBar label="SVELTE" value="90" />
+		<ProgressBar label="REACT" value="80" />
+	</div>
 
 	<h3>Backend</h3>
-	<div class="language-proficiency-group" />
+	<div class="language-proficiency-group">
+		<ProgressBar label="PYTHON" value="95" />
+		<ProgressBar label="NODE" value="90" />
+		<ProgressBar label="PHP" value="75" />
+	</div>
 
 	<h3>Database</h3>
-	<div class="language-proficiency-group" />
+	<div class="language-proficiency-group">
+		<ProgressBar label="FIREBASE" value="95" />
+		<ProgressBar label="MY-SQL" value="90" />
+		<ProgressBar label="ELASTIC SEARCH" value="85" />
+	</div>
 </div>
 
 <h2>Timeline</h2>
