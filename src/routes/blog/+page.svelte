@@ -12,7 +12,7 @@
 					<h3 class="text-center">
 						{post.title}
 					</h3>
-					<p class="text-center">{@html post.summary}</p>
+					<p class="text-center post-summary">{@html post.summary}</p>
 				</article>
 			</a>
 		{/each}
@@ -27,7 +27,7 @@
 		padding-left: 0px;
 	}
 	a {
-		border: 1px solid forestgreen;
+		border: 1px solid seagreen;
 		margin-bottom: 16px;
 		margin-right: 5px;
 		max-width: 350px;
@@ -38,5 +38,9 @@
 		list-style: none;
 		padding: 12px;
 		height: auto;
+	}
+
+	.post-summary {
+		color: darkslategray;
 	}
 </style>
