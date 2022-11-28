@@ -13,11 +13,19 @@
 
 <link rel="stylesheet" href="/prism.css" data-noprefix />
 <nav>
-	<a href={previousPost?.url} disabled={!previousPost}>Previous Post</a>
-	<a href={nextPost?.url} disabled={!nextPost}>Next Post</a>
+	<a href={previousPost?.url}>
+		{#if previousPost}Previous Post{/if}
+	</a>
+	<a href={nextPost?.url}>
+		{#if nextPost}Next Post{/if}
+	</a>
 </nav>
 
 <slot />
 
 <style>
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
 </style>
