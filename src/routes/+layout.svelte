@@ -48,7 +48,9 @@
 		user-select: none;
 		color: seagreen;
 	}
-
+	:global(li) {
+		text-align: left;
+	}
 	:global(a:hover) {
 		color: forestgreen;
 		background-color: lavender;

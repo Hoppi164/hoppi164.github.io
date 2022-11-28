@@ -12,7 +12,7 @@
 					<h3 class="text-center">
 						{post.title}
 					</h3>
-					<p class="text-center">{post.summary}</p>
+					<p class="text-center">{@html post.summary}</p>
 				</article>
 			</a>
 		{/each}
