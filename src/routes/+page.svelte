@@ -9,7 +9,7 @@
 </script>
 
 <div class="title-box">
-	<h1>About Me</h1>
+	<h2>About Me</h2>
 	<div class="title-lead">
 		<span>
 			<img
@@ -24,53 +24,53 @@
 	</div>
 </div>
 
-<h2 class="flex-center">What I'm Good At</h2>
+<h3 class="flex-center">What I'm Good At</h3>
 <div class="language-badges">
 	<div class="row">
 		<div class="col-4 flex-center flex-column">
-			<h3>HTML</h3>
+			<h4>HTML</h4>
 			<Html5 />
 		</div>
 		<div class="col-4 flex-center flex-column">
-			<h3>CSS</h3>
+			<h4>CSS</h4>
 			<Css3 />
 		</div>
 		<div class="col-4 flex-center flex-column">
-			<h3>Javascript</h3>
+			<h4>Javascript</h4>
 			<CodeBracketsSquare />
 		</div>
 		<div class="col-4 flex-center flex-column">
-			<h3>Fast</h3>
+			<h4>Fast</h4>
 			<DashboardSpeed />
 		</div>
 		<div class="col-4 flex-center flex-column">
-			<h3>Mobile Friendly</h3>
+			<h4>Mobile Friendly</h4>
 			<SmartphoneDevice />
 		</div>
 		<div class="col-4 flex-center flex-column">
-			<h3>Creative</h3>
+			<h4>Creative</h4>
 			<LightBulbOn />
 		</div>
 	</div>
 </div>
 
-<h2>Language Proficiency</h2>
+<h3>Language Proficiency</h3>
 <div class="language-proficiency">
-	<h3>Frontend</h3>
+	<h4>Frontend</h4>
 	<div class="language-proficiency-group">
 		<ProgressBar label="VUE" value="95" />
 		<ProgressBar label="SVELTE" value="90" />
 		<ProgressBar label="REACT" value="80" />
 	</div>
 
-	<h3>Backend</h3>
+	<h4>Backend</h4>
 	<div class="language-proficiency-group">
 		<ProgressBar label="PYTHON" value="95" />
 		<ProgressBar label="NODE" value="90" />
 		<ProgressBar label="PHP" value="75" />
 	</div>
 
-	<h3>Database</h3>
+	<h4>Database</h4>
 	<div class="language-proficiency-group">
 		<ProgressBar label="FIREBASE" value="95" />
 		<ProgressBar label="MY-SQL" value="90" />
@@ -78,10 +78,10 @@
 	</div>
 </div>
 
-<h2>Timeline</h2>
+<h3>Timeline</h3>
 <div class="timeline" />
 
-<h2>Projects</h2>
+<h3>Projects</h3>
 <div class="projects" />
 
 <style>

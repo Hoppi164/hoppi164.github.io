@@ -12,8 +12,40 @@
 		margin: 0px;
 	}
 
+	:global(h1) {
+		text-decoration: none;
+		color: darkgreen;
+		font-size: 24pt;
+	}
+	:global(h2) {
+		text-decoration: none;
+		color: black;
+		font-size: 16pt;
+	}
+	:global(h3) {
+		text-decoration: none;
+		color: seagreen;
+		font-size: 12pt;
+	}
+	:global(h4) {
+		text-decoration: none;
+		color: lightslategray;
+		font-size: 12pt;
+	}
+	:global(h5) {
+		text-decoration: none;
+		color: aliceblue;
+		font-size: 8pt;
+	}
+	:global(h6) {
+		text-decoration: none;
+		color: lightslategray;
+		font-size: 8pt;
+	}
+
 	:global(a) {
 		text-decoration: none;
+		user-select: none;
 		color: seagreen;
 	}
 
@@ -27,6 +59,10 @@
 		justify-content: center;
 		align-items: center;
 		align-self: center;
+	}
+	:global(.text-center) {
+		text-align: center;
+		vertical-align: middle;
 	}
 
 	:global(.flex-column) {
@@ -90,5 +126,7 @@
 
 	.content {
 		border-top: 1px solid lightslategray;
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 </style>
