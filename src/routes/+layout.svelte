@@ -53,7 +53,8 @@
 	}
 	:global(a:hover) {
 		color: forestgreen;
-		background-color: lavender;
+		background-color: rgb(175, 211, 178);
+		transition: 0.7s;
 	}
 
 	:global(.flex-center) {
