@@ -44,6 +44,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 8px;
+		border-top: 4px solid forestgreen;
 	}
 
 	.site-name > a {
@@ -64,6 +65,7 @@
 	header {
 		display: flex;
 		flex-direction: column;
+		box-shadow: 0px 0 4px seagreen;
 	}
 
 	/* Medium + Large Screen Size Only */

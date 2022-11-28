@@ -127,8 +127,6 @@
 	}
 
 	.content {
-		border-top: 1px solid lightslategray;
-		padding-left: 16px;
-		padding-right: 16px;
+		padding: 16px;
 	}
 </style>
