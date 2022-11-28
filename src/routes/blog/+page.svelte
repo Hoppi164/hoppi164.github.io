@@ -3,13 +3,40 @@
 	export let data;
 </script>
 
-<h1>Welcome to My Blog</h1>
 <div>
-	<ul>
+	<h2 class="text-center">Welcome to My Blog</h2>
+	<div class="gallery">
 		{#each data.allPosts as post}
-			<li>
-				<a href={post.url}>{post.title}</a>
-			</li>
+			<a href={post.url}>
+				<article>
+					<h3 class="text-center">
+						{post.title}
+					</h3>
+					<p class="text-center">{post.summary}</p>
+				</article>
+			</a>
 		{/each}
-	</ul>
+	</div>
 </div>
+
+<style>
+	.gallery {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding-left: 0px;
+	}
+	a {
+		border: 1px solid forestgreen;
+		margin-bottom: 16px;
+		margin-right: 5px;
+		max-width: 350px;
+		min-width: 100px;
+		border-radius: 5px;
+	}
+	article {
+		list-style: none;
+		padding: 12px;
+		height: auto;
+	}
+</style>
