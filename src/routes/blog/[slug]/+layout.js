@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
 	try {
-		const allPosts = await import(`/src/posts/all-posts.js`);
+		const allPosts = await import('../../../posts/all-posts.js');
 		return {
 			allPosts,
 			slug: params.slug
