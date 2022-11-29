@@ -10,8 +10,8 @@
 <style>
 	:global(body) {
 		margin: 0px;
+		overflow-y: scroll;
 	}
-
 	:global(h1) {
 		text-decoration: none;
 		color: darkgreen;
