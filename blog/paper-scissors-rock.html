@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-8bdfd80e.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_layout-b0272594.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-2c039671.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-2dffc822.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-d7770909.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control-b6da2371.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-aefff91d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_layout.svelte-0ead8d2e.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_layout.js-6cd0fee5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-d4f3f93e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-dbcf6193.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_page.svelte-4ed3c83d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_page.js-82efd115.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-80664e48.js">
+	</head>
+	<body>
+		<div style="display: contents">
+
+
+<header class="svelte-uvf29n"><div class="title-box svelte-uvf29n"><a href="/"><img src="/favicon.ico" alt="Site Icon"></a>
+		<div><h1 class="site-name svelte-uvf29n"><a href="/" class="svelte-uvf29n">Andrew Hopkins</a></h1>
+			<em class="site-description svelte-uvf29n">A Software Developer You Can Rely On</em></div></div>
+
+	<nav class="svelte-uvf29n"><a href="/" class="svelte-uvf29n">Home</a>
+		<a href="/blog" class="svelte-uvf29n">Blog</a>
+		<a href="https://github.com/Hoppi164" class="svelte-uvf29n">Github</a>
+		</nav>
+</header>
+<div class="content svelte-lp6aux"><div class="svelte-lp6aux"><link rel="stylesheet" href="/prism.css" data-noprefix>
+<nav class="svelte-1whp5io"><a href="/blog/better-if-statements">Previous Post</a>
+	<a href="/blog/the-power-of-ellipsis">Next Post</a></nav>
+
+<h1>Paper Scissors Rock</h1>
+<date>2021-08-26</date>
+<p>A silly childs game can pose an interesting challenge for software development.
+Programming the game rules can be approached in many different ways, obviously you could hard code a bunch of “if statements” however this would be very messy and unsustainable if you needed to add complexity to the game later on, (such as adding new rules)</p>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>player1 <span class="token operator">==</span> <span class="token string">'paper'</span> <span class="token operator">&amp;&amp;</span> player2 <span class="token operator">==</span> <span class="token string">'rock'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">return</span> <span class="token string">'player1 wins'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<blockquote><p>Don’t do this ^</p></blockquote>
+<p>The better way to solve this would be to implement a data structure built around the game rules.</p>
+<h3>Javascript — Data structure approach</h3>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript"><span class="token keyword">var</span> gamerules <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	<span class="token literal-property property">scissors</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'scissors'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">paper</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'paper'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">rock</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'rock'</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token parameter">player1<span class="token punctuation">,</span> player2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token string">playing </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>player1<span class="token punctuation">.</span>label<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string"> vs </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>player2<span class="token punctuation">.</span>label<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">&#96;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>player1<span class="token punctuation">.</span>beats <span class="token operator">===</span> player2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'player 1 wins '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>player2<span class="token punctuation">.</span>beats <span class="token operator">===</span> player1<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'player 2 wins'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'draw'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<p>The In the first section we define a ‘Gamerules’ data structure.
+This allows us to easily define the rules of the game by setting the ‘beats’ property on each option</p>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript">gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<p>In the second half we create a “Play” function which will evaluate player1 and player2 to determine which choice wins.</p>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token parameter">player1<span class="token punctuation">,</span> player2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token string">playing </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>player1<span class="token punctuation">.</span>label<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string"> vs </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>player2<span class="token punctuation">.</span>label<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">&#96;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>player1<span class="token punctuation">.</span>beats <span class="token operator">===</span> player2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'player 1 wins '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>player2<span class="token punctuation">.</span>beats <span class="token operator">===</span> player1<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'player 2 wins'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'draw'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+<p>See below for an example of how to “Play” the game using this function</p>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'starting game'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> scissors <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">;</span>
+<span class="token keyword">var</span> paper <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">;</span>
+<span class="token keyword">var</span> rock <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">;</span>
+
+<span class="token function">play</span><span class="token punctuation">(</span>scissors<span class="token punctuation">,</span> scissors<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>scissors<span class="token punctuation">,</span> paper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>scissors<span class="token punctuation">,</span> rock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">play</span><span class="token punctuation">(</span>paper<span class="token punctuation">,</span> scissors<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>paper<span class="token punctuation">,</span> paper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>paper<span class="token punctuation">,</span> rock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">play</span><span class="token punctuation">(</span>rock<span class="token punctuation">,</span> scissors<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>rock<span class="token punctuation">,</span> paper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>rock<span class="token punctuation">,</span> rock<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<details><summary>View Full Code</summary>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript"><span class="token keyword">var</span> gamerules <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+	<span class="token literal-property property">scissors</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'scissors'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">paper</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'paper'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+	<span class="token literal-property property">rock</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">label</span><span class="token operator">:</span> <span class="token string">'rock'</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">;</span>
+gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">.</span>beats <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token parameter">player1<span class="token punctuation">,</span> player2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token string">playing </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>player1<span class="token punctuation">.</span>label<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string"> vs </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>player2<span class="token punctuation">.</span>label<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">&#96;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>player1<span class="token punctuation">.</span>beats <span class="token operator">===</span> player2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'player 1 wins '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>player2<span class="token punctuation">.</span>beats <span class="token operator">===</span> player1<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'player 2 wins'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'draw'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'starting game'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> scissors <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>scissors<span class="token punctuation">;</span>
+<span class="token keyword">var</span> paper <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>paper<span class="token punctuation">;</span>
+<span class="token keyword">var</span> rock <span class="token operator">=</span> gamerules<span class="token punctuation">.</span>rock<span class="token punctuation">;</span>
+
+<span class="token function">play</span><span class="token punctuation">(</span>scissors<span class="token punctuation">,</span> scissors<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>scissors<span class="token punctuation">,</span> paper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>scissors<span class="token punctuation">,</span> rock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">play</span><span class="token punctuation">(</span>paper<span class="token punctuation">,</span> scissors<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>paper<span class="token punctuation">,</span> paper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>paper<span class="token punctuation">,</span> rock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">play</span><span class="token punctuation">(</span>rock<span class="token punctuation">,</span> scissors<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>rock<span class="token punctuation">,</span> paper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">play</span><span class="token punctuation">(</span>rock<span class="token punctuation">,</span> rock<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre></details></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1y49w2b">
+			import { start } from "../_app/immutable/start-2c039671.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2, 6],
+					params: {slug:"paper-scissors-rock"},
+					route: {"id":"/blog/[slug]"},
+					data: [null,null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1y49w2b"]').parentNode,
+				version: "1669726382325"
+			});
+		</script>
+	</div>
+	</body>
+</html>

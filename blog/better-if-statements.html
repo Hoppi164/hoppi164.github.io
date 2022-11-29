@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-8bdfd80e.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_layout-b0272594.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-2c039671.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-2dffc822.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-d7770909.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control-b6da2371.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-aefff91d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_layout.svelte-0ead8d2e.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_layout.js-6cd0fee5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-d4f3f93e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-dbcf6193.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_page.svelte-4ed3c83d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_page.js-82efd115.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-80664e48.js">
+	</head>
+	<body>
+		<div style="display: contents">
+
+
+<header class="svelte-uvf29n"><div class="title-box svelte-uvf29n"><a href="/"><img src="/favicon.ico" alt="Site Icon"></a>
+		<div><h1 class="site-name svelte-uvf29n"><a href="/" class="svelte-uvf29n">Andrew Hopkins</a></h1>
+			<em class="site-description svelte-uvf29n">A Software Developer You Can Rely On</em></div></div>
+
+	<nav class="svelte-uvf29n"><a href="/" class="svelte-uvf29n">Home</a>
+		<a href="/blog" class="svelte-uvf29n">Blog</a>
+		<a href="https://github.com/Hoppi164" class="svelte-uvf29n">Github</a>
+		</nav>
+</header>
+<div class="content svelte-lp6aux"><div class="svelte-lp6aux"><link rel="stylesheet" href="/prism.css" data-noprefix>
+<nav class="svelte-1whp5io"><a href="/blog/fizz-buzz">Previous Post</a>
+	<a href="/blog/paper-scissors-rock">Next Post</a></nav>
+
+<h1>Better "If Statements"</h1>
+<date>2021-08-23</date>
+<p>Don’t use “if statements” with lots of possible outcomes!
+It’s best to avoid this if possible, because “if statements” can get very ugly and difficult to read; “switch statements” are better, but not by much.
+The third option is much cleaner and exponentially more efficient.</p>
+<h3>Javascript - If Statement</h3>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">var response = &quot;error&quot;
+var color = &quot;&quot;
+
+if (response == &quot;success&quot;) &#123;
+	color = &quot;text-green&quot;
+&#125;
+else if (response == &quot;warning&quot;) &#123;
+	color = &quot;text-orange&quot;
+&#125;
+else if (response == &quot;error&quot;) &#123;
+	color = &quot;text-red&quot;
+&#125;
+else &#123;
+	color = &quot;text-black&quot;
+&#125;</code><!-- HTML_TAG_END --></pre>
+<blockquote><p>15 Lines and 235 characters to solve a simple problem.
+Not only is this code ugly but can also be very innefficient as the number of operations increases.
+IE: “error” will currently require 3 calculations to determine the color; if there was 15 possible colors this code could require 15 operations to determine the outcome.</p></blockquote>
+<p>In contrast the “switch statement” is far more efficient because it works on a map-based architecture.
+This means that the operation will cost the same computationally no matter the number of possible colors.
+However the “switch statement” is arguably ugly to read.</p>
+<h3>Javascript - Switch Statement</h3>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">var response = &quot;warning&quot;
+var color = &quot;&quot;
+
+switch(response) &#123;
+  case &quot;success&quot;:
+    color = &quot;text-green&quot;
+    break;
+  case &quot;warning&quot;:
+    color = &quot;text-orange&quot;
+    break;
+  case &quot;error&quot;:
+    color = &quot;text-red&quot;
+    break;
+&#125;</code><!-- HTML_TAG_END --></pre>
+<blockquote><p>With 11 lines and 221 characters: this is an improvement over the multiple “if statements” however there is a third option that is much cleaner and very efficient.</p></blockquote>
+<p>If we store our “response” and “color” in a javascript object we can use it to quickly and neatly map our “input” to our “output”
+In the below example we use the “response” variable as an object key to determine our “color” value.</p>
+<h3>Javascript - Object Map</h3>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">var response = &quot;success&quot;
+var colorMap = &#123;
+	&quot;success&quot;: &quot;text-green&quot;,
+	&quot;warning&quot;: &quot;text-orange&quot;,
+	&quot;error&quot;: &quot;text-red&quot;,
+	&quot;&quot;: &quot;text-black&quot;
+&#125;
+var color = colorMap[response]</code><!-- HTML_TAG_END --></pre>
+<blockquote><p>At 8 lines and 167 characters this is the shortest implementation.
+In a high performance situation this solution ranks much higher than the “if statement” option, the object map allows an <code>o1</code> constant performance.
+In my opinion this approach is much neater and tidier than both the “if statement” and “switch statement” options.</p></blockquote></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1nlqpml">
+			import { start } from "../_app/immutable/start-2c039671.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2, 6],
+					params: {slug:"better-if-statements"},
+					route: {"id":"/blog/[slug]"},
+					data: [null,null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1nlqpml"]').parentNode,
+				version: "1669726382325"
+			});
+		</script>
+	</div>
+	</body>
+</html>

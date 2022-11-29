@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-8bdfd80e.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_layout-b0272594.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-2c039671.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-2dffc822.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-d7770909.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control-b6da2371.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-aefff91d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_layout.svelte-0ead8d2e.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_layout.js-6cd0fee5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-d4f3f93e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-dbcf6193.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_page.svelte-4ed3c83d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_page.js-82efd115.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-80664e48.js">
+	</head>
+	<body>
+		<div style="display: contents">
+
+
+<header class="svelte-uvf29n"><div class="title-box svelte-uvf29n"><a href="/"><img src="/favicon.ico" alt="Site Icon"></a>
+		<div><h1 class="site-name svelte-uvf29n"><a href="/" class="svelte-uvf29n">Andrew Hopkins</a></h1>
+			<em class="site-description svelte-uvf29n">A Software Developer You Can Rely On</em></div></div>
+
+	<nav class="svelte-uvf29n"><a href="/" class="svelte-uvf29n">Home</a>
+		<a href="/blog" class="svelte-uvf29n">Blog</a>
+		<a href="https://github.com/Hoppi164" class="svelte-uvf29n">Github</a>
+		</nav>
+</header>
+<div class="content svelte-lp6aux"><div class="svelte-lp6aux"><link rel="stylesheet" href="/prism.css" data-noprefix>
+<nav class="svelte-1whp5io"><a href="/blog/paper-scissors-rock">Previous Post</a>
+	<a></a></nav>
+
+<h1>The Power Of Ellipsis</h1>
+<date>2021-11-02</date>
+<p>Responsiveness is a concern that should be front and center for any modern front-end developer.<br>
+Your site should look brilliant on all screens; large and small</p>
+<p>I often encounter situations where i need to display lots of content within an element, which causes a very ugly render on small screens.<br>
+This often occurs when trying to present data in a table like in the example below.</p>
+<h3>This table looks bad on mobile</h3>
+<table><thead><tr><th>ID </th>
+      <th>Real Name </th>
+      <th>Superhero Name </th>
+      <th>Power </th>
+      <th>Quote </th></tr></thead>
+ 
+  <tbody><tr><td>0 </td>
+      <td>Tony Stark </td>
+      <td>Iron Man </td>
+      <td>Genius level scientist with a Super Powered suit of armor </td>
+      <td>JARVIS, make a note. Remind me not to wake up in the morning ever again. </td></tr>
+    <tr><td>1 </td>
+      <td>Natasha Romanoff </td>
+      <td>Black Widow </td>
+      <td>Master in the covert arts of espionage, infiltration, and subterfuge </td>
+      <td>&quot;I Could Have Been More Famous Than Captain America&quot; </td></tr>
+    <tr><td>2 </td>
+      <td>Carol Danvers </td>
+      <td>Captain Marvel  </td>
+      <td>Photon Energy absorbed from the Tesseract granting her enhanced strength, stamina, agility, durability, and flight </td>
+      <td>&quot;Higher, further, faster, baby.” </td></tr>
+    <tr><td>3 </td>
+      <td>Peter Parker </td>
+      <td>Spider-Man </td>
+      <td>Abilities gained from radioactive spider bite: Superhuman strength, agility, endurance, ability to stick to and climb walls and other surfaces </td>
+      <td>&quot;With great power, comes great responsibility.&quot; </td></tr></tbody></table>
+ 
+<br>
+<br>
+<p>This table looks clean and tidy on a large screen, but on smaller devices the large amount of text will quickly take up the entire window.<br>
+My favorite way to solve this problem is to only display the first few characters in the paragraph, and replace the overflow with “ellipsis…”</p>
+<p>This allows us to view the full text on large screens, and just the first bit of the text on small screens
+You can see this in action with the sample below:</p>
+<h3>This table looks good on both desktop and mobile</h3>
+<table><thead><tr><th>ID </th>
+      <th>Real Name </th>
+      <th>Superhero Name </th>
+      <th>Power </th>
+      <th>Quote </th></tr></thead>
+ 
+  <tbody><tr><td>0 </td>
+      <td>Tony Stark </td>
+      <td>Iron Man </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">Genius level scientist with a Super Powered suit of armor </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">JARVIS, make a note. Remind me not to wake up in the morning ever again. </td></tr>
+    <tr><td>1 </td>
+      <td>Natasha Romanoff </td>
+      <td>Black Widow </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">Master in the covert arts of espionage, infiltration, and subterfuge </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">&quot;I Could Have Been More Famous Than Captain America&quot; </td></tr>
+    <tr><td>2 </td>
+      <td>Carol Danvers </td>
+      <td>Captain Marvel  </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">Photon Energy absorbed from the Tesseract granting her enhanced strength, stamina, agility, durability, and flight </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">&quot;Higher, further, faster, baby.” </td></tr>
+    <tr><td>3 </td>
+      <td>Peter Parker </td>
+      <td>Spider-Man </td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">Abilities gained from radioactive spider bite: Superhuman strength, agility, endurance, ability to stick to and climb walls and other surfaces</td>
+      <td style="overflow: hidden; max-width: 200px; text-overflow: ellipsis; white-space: nowrap;">&quot;With great power, comes great responsibility.&quot; </td></tr></tbody></table>
+<h4>HOLY MOLEY!</h4>
+<p><strong><em>Thats a dramatic difference on mobile devices</em></strong><br>
+This technique prioritizes the readability of the table and effectively “Drops” the leftover information.</p>
+<p>To accomplish this effect you can add this small CSS class to your code which specifies the text has at most 25 characters, all remaining characters will be replaced with an ellipsis ”…”</p>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+	<span class="token selector">.ellipsis</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+		<span class="token property">max-width</span><span class="token punctuation">:</span> 40ch<span class="token punctuation">;</span>
+		<span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+		<span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p>you can then use this class within your html document like so:</p>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ellipsis<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	Photon Energy absorbed from the Tesseract granting her enhanced strength, stamina, agility,
+	durability, and flight
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p>Alternatively if you are already using a frontend framework: there’s a strong chance this class has already been implemented for you.</p>
+<table><thead><tr><th>Framework </th>
+      <th>Example Use </th></tr></thead>
+  <tbody><tr><td>Bootstrap </td>
+      <td><pre> <code>&lt;p class=&quot;text-truncate&quot;&gt; very very very very very long text &lt;/p&gt;</code> </pre></td></tr>
+    <tr><td>Quasar </td>
+      <td><pre> <code>&lt;p class=&quot;ellipsis&quot;&gt; very very very very very long text &lt;/p&gt;</code> </pre></td></tr>
+    <tr><td>Tailwind </td>
+      <td><pre> <code>&lt;p class=&quot;truncate&quot;&gt; very very very very very long text &lt;/p&gt;</code> </pre></td></tr></tbody></table></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="1xrqotx">
+			import { start } from "../_app/immutable/start-2c039671.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2, 6],
+					params: {slug:"the-power-of-ellipsis"},
+					route: {"id":"/blog/[slug]"},
+					data: [null,null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1xrqotx"]').parentNode,
+				version: "1669726382325"
+			});
+		</script>
+	</div>
+	</body>
+</html>

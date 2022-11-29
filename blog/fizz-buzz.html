@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout-8bdfd80e.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_layout-b0272594.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-2c039671.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-2dffc822.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-d7770909.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control-b6da2371.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-aefff91d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_layout.svelte-0ead8d2e.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_layout.js-6cd0fee5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-d4f3f93e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-dbcf6193.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_slug_/_page.svelte-4ed3c83d.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_slug_/_page.js-82efd115.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-80664e48.js">
+	</head>
+	<body>
+		<div style="display: contents">
+
+
+<header class="svelte-uvf29n"><div class="title-box svelte-uvf29n"><a href="/"><img src="/favicon.ico" alt="Site Icon"></a>
+		<div><h1 class="site-name svelte-uvf29n"><a href="/" class="svelte-uvf29n">Andrew Hopkins</a></h1>
+			<em class="site-description svelte-uvf29n">A Software Developer You Can Rely On</em></div></div>
+
+	<nav class="svelte-uvf29n"><a href="/" class="svelte-uvf29n">Home</a>
+		<a href="/blog" class="svelte-uvf29n">Blog</a>
+		<a href="https://github.com/Hoppi164" class="svelte-uvf29n">Github</a>
+		</nav>
+</header>
+<div class="content svelte-lp6aux"><div class="svelte-lp6aux"><link rel="stylesheet" href="/prism.css" data-noprefix>
+<nav class="svelte-1whp5io"><a href="/blog/hello-world">Previous Post</a>
+	<a href="/blog/better-if-statements">Next Post</a></nav>
+
+<h1>Fizz Buzz</h1>
+<date>2020-09-13</date>
+<p>The “Fizz-Buzz test” is an interview question designed to filter out 90% of candidates who can’t solve the simplest of problems.</p>
+<blockquote><p>“Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.”</p></blockquote>
+<p>This problem is difficult for many new developers as it requires some forward thinking.
+It’s a beneficial test for employers as it reveals each candidates approach to a problem.</p>
+<p>Here is my recommended approach to the Fizz Buzz question:</p>
+<p>Use a <code>message</code> variable which will allow you to solve this challenge in a very neat and readable way.</p>
+<h3>Python</h3>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	message <span class="token operator">=</span> <span class="token string">""</span>
+	<span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+		message <span class="token operator">+=</span> <span class="token string">"Fizz"</span>
+	<span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+		message <span class="token operator">+=</span> <span class="token string">"Buzz"</span>
+	<span class="token keyword">if</span> message <span class="token operator">==</span> <span class="token string">""</span><span class="token punctuation">:</span>
+		message <span class="token operator">=</span> i
+	<span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+<h3>Javascript</h3>
+<pre class="language-javascript"><!-- HTML_TAG_START --><code class="language-javascript"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> message <span class="token operator">+=</span> <span class="token string">'Fizz'</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">5</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> message <span class="token operator">+=</span> <span class="token string">'Buzz'</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>message <span class="token operator">==</span> <span class="token string">''</span><span class="token punctuation">)</span> message <span class="token operator">=</span> i<span class="token punctuation">;</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre></div>
+</div>
+
+
+		<script type="module" data-sveltekit-hydrate="x83hd6">
+			import { start } from "../_app/immutable/start-2c039671.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 2, 6],
+					params: {slug:"fizz-buzz"},
+					route: {"id":"/blog/[slug]"},
+					data: [null,null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="x83hd6"]').parentNode,
+				version: "1669726382325"
+			});
+		</script>
+	</div>
+	</body>
+</html>
