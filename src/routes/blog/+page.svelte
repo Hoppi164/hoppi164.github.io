@@ -24,12 +24,10 @@
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		padding-left: 0px;
+		gap: 16px;
 	}
 	a {
 		border: 1px solid seagreen;
-		margin-bottom: 16px;
-		margin-right: 5px;
 		max-width: 350px;
 		min-width: 100px;
 		border-radius: 5px;
