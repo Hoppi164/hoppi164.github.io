@@ -3,7 +3,6 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	base: '/',
 	plugins: [
 		sveltekit(),
 		visualizer({

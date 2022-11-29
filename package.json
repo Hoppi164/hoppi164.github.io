@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"deploy": "npx gh-pages -d build",
+		"deploy": "npx gh-pages -d build -t true",
 		"analyze": "bash .svelte-kit/output/client/stats.html || powershell.exe -c .svelte-kit/output/client/stats.html",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
