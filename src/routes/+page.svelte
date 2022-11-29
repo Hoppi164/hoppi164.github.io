@@ -14,6 +14,7 @@
 		<span class="col-5">
 			<img
 				src="https://avatars0.githubusercontent.com/u/9586453?s=460&u=aff94f5b839987bbbd427c2297a3d5aa5f2589b1&v=4"
+				class="headshot-portrait"
 				alt="headshot portrait"
 			/>
 		</span>
@@ -98,11 +99,12 @@
 		text-align: center;
 	}
 
-	img {
-		border: 1px solid lightslategray;
+	.headshot-portrait {
+		/* border: 1px solid lightslategray; */
+		box-shadow: 0 0 10px 0px lightslategray;
 		border-radius: 100%;
-		max-height: 300px;
-		max-width: 300px;
+		max-height: 200px;
+		max-width: 200px;
 		min-height: 50px;
 		min-width: 50px;
 		width: 100%;
