@@ -4,7 +4,9 @@
 
 <NavBar />
 <div class="content">
-	<slot />
+	<div>
+		<slot />
+	</div>
 </div>
 
 <style>
@@ -129,5 +131,14 @@
 
 	.content {
 		padding: 16px;
+	}
+	@media only screen and (min-width: 900px) {
+		.content {
+			display: flex;
+			justify-content: center;
+		}
+		.content > div {
+			width: 60%;
+		}
 	}
 </style>
