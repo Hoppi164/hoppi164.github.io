@@ -293,6 +293,10 @@
       "_index-2dffc822.js"
     ]
   },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout-8bdfd80e.css",
+    "src": "src/routes/+layout.css"
+  },
   "src/routes/blog/[slug]/+layout.css": {
     "file": "_app/immutable/assets/_layout-b0272594.css",
     "src": "src/routes/blog/[slug]/+layout.css"
@@ -300,10 +304,6 @@
   "src/routes/+page.css": {
     "file": "_app/immutable/assets/_page-bfdeff0c.css",
     "src": "src/routes/+page.css"
-  },
-  "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-8bdfd80e.css",
-    "src": "src/routes/+layout.css"
   },
   "src/routes/blog/+page.css": {
     "file": "_app/immutable/assets/_page-74bdd250.css",
