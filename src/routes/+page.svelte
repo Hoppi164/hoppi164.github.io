@@ -10,14 +10,14 @@
 
 <div class="title-box">
 	<h2>About Me</h2>
-	<div class="title-lead">
-		<span>
+	<div class="row">
+		<span class="col-5">
 			<img
 				src="https://avatars0.githubusercontent.com/u/9586453?s=460&u=aff94f5b839987bbbd427c2297a3d5aa5f2589b1&v=4"
 				alt="headshot portrait"
 			/>
 		</span>
-		<em class="flex-center">
+		<em class="col-7 flex-center text-center">
 			I'm an experienced fullstack developer with an enthusiasm for creating user-friendly web
 			applications.
 		</em>
@@ -92,8 +92,6 @@
 		font-family: Segoe UI;
 	}
 	.title-box > .title-lead {
-		display: flex;
-		justify-content: space-around;
 		gap: 10px;
 		font-style: italic;
 		font-family: Serif;
