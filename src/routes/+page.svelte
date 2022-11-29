@@ -8,7 +8,7 @@
 	import ProgressBar from '$lib/components/ProgressBar.svelte';
 </script>
 
-<div class="title-box">
+<section class="title-box">
 	<h2>About Me</h2>
 	<div class="row">
 		<span class="col-5">
@@ -23,10 +23,10 @@
 			applications.
 		</em>
 	</div>
-</div>
+</section>
 
 <h3 class="flex-center">What I'm Good At</h3>
-<div class="language-badges">
+<section class="language-badges">
 	<div class="row">
 		<div class="col-4 flex-center flex-column">
 			<h4>HTML</h4>
@@ -53,10 +53,10 @@
 			<LightBulbOn />
 		</div>
 	</div>
-</div>
+</section>
 
-<h3>Language Proficiency</h3>
-<div class="language-proficiency">
+<h3 class="text-center">Language Proficiency</h3>
+<section class="language-proficiency">
 	<h4>Frontend</h4>
 	<div class="language-proficiency-group">
 		<ProgressBar label="VUE" value="95" />
@@ -77,7 +77,7 @@
 		<ProgressBar label="MY-SQL" value="90" />
 		<ProgressBar label="ELASTIC SEARCH" value="85" />
 	</div>
-</div>
+</section>
 <!-- 
 <h3>Timeline</h3>
 <div class="timeline">
@@ -199,8 +199,38 @@
 </div>
 -->
 
-<h3>Projects</h3>
-<div class="projects" />
+<h3 class="text-center">Projects</h3>
+<section class="projects">
+	<div class="project">
+		<h4>Hangman</h4>
+		<img src="/images/hangman.avif" alt="A game of hangman" />
+		<p>
+			A web based rendition of the classic childrens game "Hangman". Guess the word correctly or the
+			man dies.
+		</p>
+	</div>
+
+	<div class="project">
+		<h4>Random DND Town Generator</h4>
+		<img src="/images/towngen.avif" alt="A game of hangman" />
+		<p>
+			A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't
+			fleshed out yet.
+		</p>
+	</div>
+
+	<div class="project">
+		<h4>Todo App</h4>
+		<img src="/images/todo_list.avif" alt="A game of hangman" />
+		<p>A Sample TODO webapp to exhibit Alpine JS.</p>
+	</div>
+
+	<div class="project">
+		<h4>Zombie Chase Game</h4>
+		<img src="/images/zombiechase.avif" alt="A game of hangman" />
+		<p>A "running from zombies simulator" game. You have no weapon, and no goal except: Escape.</p>
+	</div>
+</section>
 
 <style>
 	.title-box {
@@ -255,4 +285,31 @@
 		width: 40%;
 		padding: 32px;
 	} */
+
+	.projects {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 32px;
+	}
+	.project {
+		box-shadow: 0 0 8px 0px seagreen;
+		text-align: center;
+		width: 100%;
+		padding: 16px;
+	}
+
+	@media only screen and (min-width: 900px) {
+		.project {
+			width: 40%;
+		}
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	section {
+		margin-bottom: 64px;
+	}
 </style>
