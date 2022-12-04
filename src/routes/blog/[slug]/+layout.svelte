@@ -13,10 +13,12 @@
 
 <link rel="stylesheet" href="/prism.css" data-noprefix />
 <nav>
-	<a href={`/blog/${previousPost?.slug}`}>
-		{#if previousPost}Previous Post{/if}
+	<a href={previousPost && `/blog/${previousPost?.slug}`}>
+		{#if previousPost}
+			Previous Post
+		{/if}
 	</a>
-	<a href={`/blog/${nextPost?.slug}`}>
+	<a href={nextPost && `/blog/${nextPost?.slug}`}>
 		{#if nextPost}Next Post{/if}
 	</a>
 </nav>
