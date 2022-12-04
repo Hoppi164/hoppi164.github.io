@@ -1,6 +1,6 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-2c039671.js",
+    "file": "_app/immutable/start-c9fffdab.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -39,7 +39,7 @@
     ]
   },
   "src/routes/blog/[slug]/+layout.svelte": {
-    "file": "_app/immutable/components/pages/blog/_slug_/_layout.svelte-0ead8d2e.js",
+    "file": "_app/immutable/components/pages/blog/_slug_/_layout.svelte-6588949e.js",
     "src": "src/routes/blog/[slug]/+layout.svelte",
     "isEntry": true,
     "imports": [
@@ -70,7 +70,7 @@
     ]
   },
   "src/routes/blog/+page.svelte": {
-    "file": "_app/immutable/components/pages/blog/_page.svelte-6a7a19e9.js",
+    "file": "_app/immutable/components/pages/blog/_page.svelte-96b35769.js",
     "src": "src/routes/blog/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -97,32 +97,32 @@
     ]
   },
   "src/routes/blog/[slug]/+layout.js": {
-    "file": "_app/immutable/modules/pages/blog/_slug_/_layout.js-6cd0fee5.js",
+    "file": "_app/immutable/modules/pages/blog/_slug_/_layout.js-513b175c.js",
     "src": "src/routes/blog/[slug]/+layout.js",
     "isEntry": true,
     "imports": [
-      "_control-b6da2371.js",
+      "_getBlogPosts-b437db49.js",
       "_index-d4f3f93e.js",
-      "__layout-dbcf6193.js"
+      "__layout-e9fcff95.js"
     ]
   },
   "src/routes/blog/+page.js": {
-    "file": "_app/immutable/modules/pages/blog/_page.js-4dd8d4dd.js",
+    "file": "_app/immutable/modules/pages/blog/_page.js-130255a8.js",
     "src": "src/routes/blog/+page.js",
     "isEntry": true,
     "imports": [
-      "_control-b6da2371.js",
+      "_getBlogPosts-b437db49.js",
       "_index-d4f3f93e.js",
-      "__page-e7d5bceb.js"
+      "__page-1c786688.js"
     ]
   },
   "src/routes/blog/[slug]/+page.js": {
-    "file": "_app/immutable/modules/pages/blog/_slug_/_page.js-82efd115.js",
+    "file": "_app/immutable/modules/pages/blog/_slug_/_page.js-3d280113.js",
     "src": "src/routes/blog/[slug]/+page.js",
     "isEntry": true,
     "imports": [
       "_control-b6da2371.js",
-      "__page-80664e48.js",
+      "__page-84f97074.js",
       "_index-d4f3f93e.js"
     ]
   },
@@ -148,14 +148,24 @@
       "_singletons-d7770909.js"
     ]
   },
-  "__layout-dbcf6193.js": {
-    "file": "_app/immutable/chunks/_layout-dbcf6193.js",
+  "__layout-e9fcff95.js": {
+    "file": "_app/immutable/chunks/_layout-e9fcff95.js",
     "imports": [
-      "_control-b6da2371.js",
+      "_getBlogPosts-b437db49.js",
       "_index-d4f3f93e.js"
+    ]
+  },
+  "_getBlogPosts-b437db49.js": {
+    "file": "_app/immutable/chunks/getBlogPosts-b437db49.js",
+    "imports": [
+      "_control-b6da2371.js"
     ],
     "dynamicImports": [
-      "src/posts/all-posts.js"
+      "src/posts/better-if-statements.md",
+      "src/posts/fizz-buzz.md",
+      "src/posts/hello-world.md",
+      "src/posts/paper-scissors-rock.md",
+      "src/posts/the-power-of-ellipsis.md"
     ]
   },
   "_index-d4f3f93e.js": {
@@ -164,18 +174,15 @@
       "_control-b6da2371.js"
     ]
   },
-  "__page-e7d5bceb.js": {
-    "file": "_app/immutable/chunks/_page-e7d5bceb.js",
+  "__page-1c786688.js": {
+    "file": "_app/immutable/chunks/_page-1c786688.js",
     "imports": [
-      "_control-b6da2371.js",
+      "_getBlogPosts-b437db49.js",
       "_index-d4f3f93e.js"
-    ],
-    "dynamicImports": [
-      "src/posts/all-posts.js"
     ]
   },
-  "__page-80664e48.js": {
-    "file": "_app/immutable/chunks/_page-80664e48.js",
+  "__page-84f97074.js": {
+    "file": "_app/immutable/chunks/_page-84f97074.js",
     "imports": [
       "_control-b6da2371.js",
       "_index-d4f3f93e.js"
@@ -206,11 +213,11 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-03367d4c.js",
+    "file": "_app/immutable/chunks/2-f59723ca.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
-      "__layout-dbcf6193.js",
+      "__layout-e9fcff95.js",
       "src/routes/blog/[slug]/+layout.svelte"
     ]
   },
@@ -231,30 +238,25 @@
     ]
   },
   ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-07daf0c3.js",
+    "file": "_app/immutable/chunks/5-a0183df1.js",
     "src": ".svelte-kit/generated/nodes/5.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-e7d5bceb.js",
+      "__page-1c786688.js",
       "src/routes/blog/+page.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/6.js": {
-    "file": "_app/immutable/chunks/6-09128324.js",
+    "file": "_app/immutable/chunks/6-763d6827.js",
     "src": ".svelte-kit/generated/nodes/6.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-80664e48.js",
+      "__page-84f97074.js",
       "src/routes/blog/[slug]/+page.svelte"
     ]
   },
-  "src/posts/all-posts.js": {
-    "file": "_app/immutable/chunks/all-posts-fe65c755.js",
-    "src": "src/posts/all-posts.js",
-    "isDynamicEntry": true
-  },
   "src/posts/better-if-statements.md": {
-    "file": "_app/immutable/chunks/better-if-statements-3515df31.js",
+    "file": "_app/immutable/chunks/better-if-statements-600b565e.js",
     "src": "src/posts/better-if-statements.md",
     "isDynamicEntry": true,
     "imports": [
@@ -262,7 +264,7 @@
     ]
   },
   "src/posts/fizz-buzz.md": {
-    "file": "_app/immutable/chunks/fizz-buzz-437ebf39.js",
+    "file": "_app/immutable/chunks/fizz-buzz-747636ca.js",
     "src": "src/posts/fizz-buzz.md",
     "isDynamicEntry": true,
     "imports": [
@@ -270,7 +272,7 @@
     ]
   },
   "src/posts/hello-world.md": {
-    "file": "_app/immutable/chunks/hello-world-2c6b7e23.js",
+    "file": "_app/immutable/chunks/hello-world-f8146037.js",
     "src": "src/posts/hello-world.md",
     "isDynamicEntry": true,
     "imports": [
@@ -278,7 +280,7 @@
     ]
   },
   "src/posts/paper-scissors-rock.md": {
-    "file": "_app/immutable/chunks/paper-scissors-rock-7a85bb6a.js",
+    "file": "_app/immutable/chunks/paper-scissors-rock-b41a1e5b.js",
     "src": "src/posts/paper-scissors-rock.md",
     "isDynamicEntry": true,
     "imports": [
@@ -286,7 +288,7 @@
     ]
   },
   "src/posts/the-power-of-ellipsis.md": {
-    "file": "_app/immutable/chunks/the-power-of-ellipsis-911b67db.js",
+    "file": "_app/immutable/chunks/the-power-of-ellipsis-83d10c5a.js",
     "src": "src/posts/the-power-of-ellipsis.md",
     "isDynamicEntry": true,
     "imports": [
@@ -297,6 +299,10 @@
     "file": "_app/immutable/assets/_page-74bdd250.css",
     "src": "src/routes/blog/+page.css"
   },
+  "src/routes/blog/[slug]/+layout.css": {
+    "file": "_app/immutable/assets/_layout-b0272594.css",
+    "src": "src/routes/blog/[slug]/+layout.css"
+  },
   "src/routes/+layout.css": {
     "file": "_app/immutable/assets/_layout-8bdfd80e.css",
     "src": "src/routes/+layout.css"
@@ -304,9 +310,5 @@
   "src/routes/+page.css": {
     "file": "_app/immutable/assets/_page-bfdeff0c.css",
     "src": "src/routes/+page.css"
-  },
-  "src/routes/blog/[slug]/+layout.css": {
-    "file": "_app/immutable/assets/_layout-b0272594.css",
-    "src": "src/routes/blog/[slug]/+layout.css"
   }
 }

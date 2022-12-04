@@ -1,1 +1,0 @@
-import{_ as t}from"./control-b6da2371.js";import{e as r}from"./index-d4f3f93e.js";async function e(){try{return await t(()=>import("./all-posts-fe65c755.js"),[],import.meta.url)}catch{throw r(500,"Post Index Not Found")}}const l=Object.freeze(Object.defineProperty({__proto__:null,load:e},Symbol.toStringTag,{value:"Module"}));export{l as _,e as l};
