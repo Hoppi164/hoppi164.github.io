@@ -1,13 +1,16 @@
 <script>
+	import { json } from '@sveltejs/kit';
+
 	/** @type {import('./$types').PageData} */
 	export let data;
+	const allPosts = Object.values(data);
 </script>
 
 <div>
 	<h2 class="text-center">Welcome to My Blog</h2>
 	<div class="gallery">
-		{#each data.allPosts as post}
-			<a href={post.url}>
+		{#each allPosts as post}
+			<a href={`/blog/${post.slug}`}>
 				<article>
 					<h3 class="text-center">
 						{post.title}

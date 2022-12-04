@@ -3,6 +3,7 @@ layout: post
 title: Fizz Buzz
 date: '2020-09-13'
 slug: 'fizz-buzz'
+summary: 'The "Fizz-Buzz test" is an interview question designed to filter out 90% of candidates who cannot solve the simplest of problems. <ul><li> "Write a program that prints the numbers from 1 to 100. </li> <li>But for multiples of three print “Fizz” instead of the number</li> <li> and for the multiples of five print “Buzz”.</li><li> For numbers which are multiples of both three and five print “FizzBuzz”</li></ul>'
 ---
 
 The "Fizz-Buzz test" is an interview question designed to filter out 90% of candidates who can't solve the simplest of problems.
