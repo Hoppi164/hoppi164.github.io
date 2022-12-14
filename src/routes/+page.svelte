@@ -158,6 +158,6 @@
 	}
 
 	section {
-		margin-bottom: 64px;
+		margin-top: 128px;
 	}
 </style>
