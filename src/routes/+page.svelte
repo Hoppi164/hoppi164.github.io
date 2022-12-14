@@ -20,8 +20,8 @@
 	</div>
 </section>
 
-<h3 class="flex-center">What I'm Good At</h3>
 <section class="language-badges">
+	<h3 class="flex-center">What I'm Good At</h3>
 	<div class="row">
 		<div class="col-4 flex-center flex-column">
 			<h4>HTML</h4>
@@ -50,8 +50,8 @@
 	</div>
 </section>
 
-<h3 class="text-center">Language Proficiency</h3>
 <section class="language-proficiency">
+	<h3 class="text-center">Language Proficiency</h3>
 	<h4>Frontend</h4>
 	<div class="language-proficiency-group">
 		<ProgressBar label="VUE" value="95" />
@@ -74,37 +74,41 @@
 	</div>
 </section>
 
-<h3 class="text-center">Projects</h3>
-<section class="projects">
-	<a href="https://hoppi164.github.io/hangman/" class="project">
-		<h4>Hangman</h4>
-		<img src="/images/hangman.avif" alt="A game of hangman" />
-		<p>
-			A web based rendition of the classic childrens game "Hangman". Guess the word correctly or the
-			man dies.
-		</p>
-	</a>
+<section>
+	<h3 class="text-center">Projects</h3>
+	<div class="projects">
+		<a href="https://hoppi164.github.io/hangman/" class="project">
+			<h4>Hangman</h4>
+			<img src="/images/hangman.avif" alt="A game of hangman" />
+			<p>
+				A web based rendition of the classic childrens game "Hangman". Guess the word correctly or
+				the man dies.
+			</p>
+		</a>
 
-	<a href="https://hoppi164.github.io/townGen/" class="project">
-		<h4>Random DND Town Generator</h4>
-		<img src="/images/towngen.avif" alt="D&D Generator" />
-		<p>
-			A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't
-			fleshed out yet.
-		</p>
-	</a>
+		<a href="https://hoppi164.github.io/townGen/" class="project">
+			<h4>Random DND Town Generator</h4>
+			<img src="/images/towngen.avif" alt="D&D Generator" />
+			<p>
+				A random generator for when your Dungeons & Dragons Party ventures into a new town you
+				haven't fleshed out yet.
+			</p>
+		</a>
 
-	<a href="https://hoppi164.github.io/alpine-todo/" class="project">
-		<h4>Todo App</h4>
-		<img src="/images/todo_list.avif" alt="A To Do app" />
-		<p>A Sample TODO webapp to exhibit Alpine JS.</p>
-	</a>
+		<a href="https://hoppi164.github.io/alpine-todo/" class="project">
+			<h4>Todo App</h4>
+			<img src="/images/todo_list.avif" alt="A To Do app" />
+			<p>A Sample TODO webapp to exhibit Alpine JS.</p>
+		</a>
 
-	<a href="https://connect.unity.com/p/zombie-chase" class="project">
-		<h4>Zombie Chase Game</h4>
-		<img src="/images/zombiechase.avif" alt="A game of zombies" />
-		<p>A "running from zombies simulator" game. You have no weapon, and no goal except: Escape.</p>
-	</a>
+		<a href="https://connect.unity.com/p/zombie-chase" class="project">
+			<h4>Zombie Chase Game</h4>
+			<img src="/images/zombiechase.avif" alt="A game of zombies" />
+			<p>
+				A "running from zombies simulator" game. You have no weapon, and no goal except: Escape.
+			</p>
+		</a>
+	</div>
 </section>
 
 <style>
