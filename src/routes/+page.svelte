@@ -76,35 +76,35 @@
 
 <h3 class="text-center">Projects</h3>
 <section class="projects">
-	<div class="project">
+	<a href="https://hoppi164.github.io/hangman/" class="project">
 		<h4>Hangman</h4>
 		<img src="/images/hangman.avif" alt="A game of hangman" />
 		<p>
 			A web based rendition of the classic childrens game "Hangman". Guess the word correctly or the
 			man dies.
 		</p>
-	</div>
+	</a>
 
-	<div class="project">
+	<a href="https://hoppi164.github.io/townGen/" class="project">
 		<h4>Random DND Town Generator</h4>
-		<img src="/images/towngen.avif" alt="A game of hangman" />
+		<img src="/images/towngen.avif" alt="D&D Generator" />
 		<p>
 			A random generator for when your Dungeons & Dragons Party ventures into a new town you haven't
 			fleshed out yet.
 		</p>
-	</div>
+	</a>
 
-	<div class="project">
+	<a href="https://hoppi164.github.io/alpine-todo/" class="project">
 		<h4>Todo App</h4>
-		<img src="/images/todo_list.avif" alt="A game of hangman" />
+		<img src="/images/todo_list.avif" alt="A To Do app" />
 		<p>A Sample TODO webapp to exhibit Alpine JS.</p>
-	</div>
+	</a>
 
-	<div class="project">
+	<a href="https://connect.unity.com/p/zombie-chase" class="project">
 		<h4>Zombie Chase Game</h4>
-		<img src="/images/zombiechase.avif" alt="A game of hangman" />
+		<img src="/images/zombiechase.avif" alt="A game of zombies" />
 		<p>A "running from zombies simulator" game. You have no weapon, and no goal except: Escape.</p>
-	</div>
+	</a>
 </section>
 
 <style>
@@ -142,6 +142,9 @@
 		text-align: center;
 		width: 100%;
 		padding: 16px;
+	}
+	.project > img {
+		box-shadow: 0 3px 10px lightslategray;
 	}
 
 	@media only screen and (min-width: 900px) {
