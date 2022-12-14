@@ -1,10 +1,5 @@
 <script>
-	import Html5 from '$lib/components/icons/html5.svelte';
-	import Css3 from '$lib/components/icons/css3.svelte';
-	import CodeBracketsSquare from '$lib/components/icons/code-brackets-square.svelte';
-	import DashboardSpeed from '$lib/components/icons/dashboard-speed.svelte';
-	import LightBulbOn from '$lib/components/icons/light-bulb-on.svelte';
-	import SmartphoneDevice from '$lib/components/icons/smartphone-device.svelte';
+	import Icon from '$lib/components/Icon.svelte';
 	import ProgressBar from '$lib/components/ProgressBar.svelte';
 </script>
 
@@ -30,27 +25,27 @@
 	<div class="row">
 		<div class="col-4 flex-center flex-column">
 			<h4>HTML</h4>
-			<Html5 />
+			<Icon iconName="Html5" />
 		</div>
 		<div class="col-4 flex-center flex-column">
 			<h4>CSS</h4>
-			<Css3 />
+			<Icon iconName="Css3" />
 		</div>
 		<div class="col-4 flex-center flex-column">
 			<h4>Javascript</h4>
-			<CodeBracketsSquare />
+			<Icon iconName="CodeBracketsSquare" />
 		</div>
 		<div class="col-4 flex-center flex-column">
 			<h4>Fast</h4>
-			<DashboardSpeed />
+			<Icon iconName="DashboardSpeed" />
 		</div>
 		<div class="col-4 flex-center flex-column">
 			<h4>Mobile Friendly</h4>
-			<SmartphoneDevice />
+			<Icon iconName="SmartphoneDevice" />
 		</div>
 		<div class="col-4 flex-center flex-column">
 			<h4>Creative</h4>
-			<LightBulbOn />
+			<Icon iconName="LightBulbOn" />
 		</div>
 	</div>
 </section>
