@@ -59,6 +59,36 @@
 		transition: 0.7s;
 	}
 
+	:global(table) {
+		width: 100%;
+		--border: 1px solid lightslategray;
+		border-radius: 8px;
+
+		border-spacing: 0;
+		border-collapse: separate;
+		border: var(--border);
+		overflow: hidden;
+	}
+
+	:global(thead) {
+		border-right: var(--border);
+		background-color: darkgreen;
+		color: white;
+	}
+	:global(tr) {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	:global(th) {
+		padding: 8px;
+		width: 100%;
+		text-align: center;
+	}
+	:global(td) {
+		padding: 8px;
+		width: 100%;
+	}
+
 	:global(.flex-center) {
 		display: flex;
 		justify-content: center;
