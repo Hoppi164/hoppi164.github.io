@@ -12,7 +12,7 @@ export async function getBlogPosts() {
 	}
 
 	const allPosts = await Promise.all(blogPostData);
-	let sortedPosts = allPosts.sort((a, b) => b.date - a.date);
+	let sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 	if (!sortedPosts || sortedPosts.length === 0) {
 		throw new Error('No Posts Found');
 	}

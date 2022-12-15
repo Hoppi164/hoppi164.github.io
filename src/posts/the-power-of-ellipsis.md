@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Power Of Ellipsis
-date: '2021-11-02'
+date: 2021-11-02
 slug: 'the-power-of-ellipsis'
 summary: 'Responsiveness is a concern that should be front and center for any modern front-end developer. Your site should look brilliant on all screens; large and small'
 ---

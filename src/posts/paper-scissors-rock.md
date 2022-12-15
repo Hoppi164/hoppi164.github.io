@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paper Scissors Rock
-date: '2021-08-26'
+date: 2021-08-26
 slug: 'paper-scissors-rock'
 summary: 'A silly childs game can pose an interesting challenge for software development.<br><br> Programming the game rules can be approached in many different ways'
 ---

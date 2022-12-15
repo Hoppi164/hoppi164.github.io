@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Better "If Statements"'
-date: '2021-08-23'
+date: 2021-08-23
 slug: 'better-if-statements'
 summary: 'Don''t use "if statements" with lots of possible outcomes!<br><br> It''s best to avoid this if possible, <ul> <li>"IF statements" can get very ugly and difficult to read</li> <li>"Switch statements" are better, but not by much.</li> <br> <li>The third option is much cleaner and exponentially more efficient.</li> </ul>'
 ---
