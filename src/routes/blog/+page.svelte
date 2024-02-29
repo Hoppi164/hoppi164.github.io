@@ -3,7 +3,7 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-	const allPosts = Object.values(data);
+	const allPosts = Object.values(data.allPosts);
 </script>
 
 <div>
