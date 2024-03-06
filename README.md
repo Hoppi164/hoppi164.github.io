@@ -21,7 +21,7 @@ The site is hand coded using [Sveltekit](https://kit.svelte.dev/), [Netlify-CMS]
 ## 1. Install
 
 ```bash
-git clone git@github.com:Hoppi164/Hoppi164.git
+git clone git@github.com:Hoppi164/hoppi164.github.io.git
 ```
 
 ```bash
