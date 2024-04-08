@@ -31,8 +31,6 @@ Custom Code
 | Can optimize your code for performance   | May require a deeper understanding of the underlying technology |
 | Can implement unique or complex features |                                                                 |
 
-<br>
-
 Prebuilt Libraries
 
 | Pros                                               | Cons                                                             |
@@ -40,7 +38,5 @@ Prebuilt Libraries
 | Can save time and effort                           | May include more functionality than you need                     |
 | Can provide a ready-made solution for common tasks | Can be difficult to customize and may not provide enough control |
 |                                                    | Can increase the size and complexity of your project             |
-
-<br>
 
 Ultimately, the choice between using custom code and prebuilt libraries will depend on the specific needs of your project. If you need to implement a unique feature or if you want to have complete control over your project, using custom code may be the best option. However, if you need to get a project up and running quickly and don't need a high level of customization, using a prebuilt library can be a good choice.

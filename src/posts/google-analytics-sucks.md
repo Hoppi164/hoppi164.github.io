@@ -17,7 +17,7 @@ In this article i'm going to cover:
 - Why Google Analytics falls short of my expectations
 - What a better alternative is ( no this isn't a sponsored post )
 
-<br><hr><br>
+<hr>
 
 ## What You Want From An Analytics Platform
 
@@ -31,7 +31,7 @@ When you're looking for an analytics platform you want to be able to answer ques
 - What are my users doing on my site?
 - Are my users experiencing any issues?
 
-<br><hr><br>
+<hr>
 
 ## What You Get From Google Analytics
 
@@ -80,8 +80,6 @@ This can result in false results due to VPNs, or users using a proxy server.
 GA4 is not very customisable, for example, i've found that it's hard to track custom events, or to track custom user properties.
 
 The best way to perform advanced queries is to export the data to BigQuery, and then query the data in BigQuery. This results in a really nice interface for querying the data, but it's astonishing that you have to use a separate tool to get the data you want.
-
-<br>
 
 ## The Better Solution
 

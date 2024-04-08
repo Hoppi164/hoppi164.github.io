@@ -33,7 +33,7 @@ The ideal recruiter will happily provide the following information in their very
 <br>
 No recruiter can expect a candidate to apply for a job without providing a detailed job description.
 <br>
-Any recruiter who doesn't provide this information is not worth working with. <br>Here's why:<br><br>
+Any recruiter who doesn't provide this information is not worth working with. <br>Here's why:
 
 <details>
 <summary>If they <b>Don't have the necessary information</b>
@@ -59,8 +59,6 @@ This kind of attitude is a red flag of a rookie recruiter, or a recruiter that d
 A recruiter that deliberately withholds information from candidates is going to be a nightmare to work with, and most employers would rather not work with them.
 
 </details>
-
-<br>
 
 ### Communicates Clearly
 
@@ -127,5 +125,3 @@ The ideal recruiter is a professional who
 - Is respectful
 
 The most vital aspect of a recruiter is their ability to provide value to both the candidate and the employer.
-
-<br><br>

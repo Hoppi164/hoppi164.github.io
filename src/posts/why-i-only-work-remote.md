@@ -15,8 +15,6 @@ The pro's completely outweigh the con's for me, and i'm not sure i could ever go
 
 ## The Pro's
 
-<hr>
-
 ### No Commute
 
 By far the biggest pro for me is not having to commute to work.
@@ -99,7 +97,6 @@ $9,389.40 + $481.60 = $9,871 Each Year In Total Costs
 ```
 
 <em>That's almost $10,000 a year i'm saving in hidden costs!</em>
-<br><br><br>
 
 ### Controlled Environment
 
@@ -125,8 +122,6 @@ Noise is a huge distraction for me, and i believe it's a huge productivity kille
 
 I often feel bad for my in-office coworkers on video calls when they're clearly struggling to pay attention to the conversation because of the background noise in the office.
 
-<br>
-
 ### Flexibility
 
 I can work from anywhere in the world, as long as i have an internet connection.
@@ -151,8 +146,6 @@ Every "Remote First" business i've worked for has been very flexible with hours,
 - Somedays i start work at 6am and finish at 2pm
 - Somedays i start work at 10am and finish at 6pm
 
-<br>
-
 ### Work-Life Balance
 
 I have a better work-life balance working remotely.
@@ -162,8 +155,6 @@ The time i save not commuting to work, i can spend with my family, or on hobbies
 I can take my dog for a walk on my lunch break, or watch 30 minutes of TV, or do some gardening.
 
 It's shocking to look back and remember how little time i had for myself when i was commuting to work, had to have a short lunch break where i'd either eat at my desk or stare at my phone in the break room as i ate my lunch.
-
-<br>
 
 ### No Office Politics
 
@@ -176,8 +167,6 @@ This kind of stuff doesn't happen in a remote environment, because you're judged
 There is significantly less drama, and miscommunication in a remote environment; as almost everything is written down, and there's a lot less room for interpretation.
 This results in a much more transparent and fair work environment.
 
-<br>
-
 ### No Dress Code
 
 I can wear whatever i want when i work from home.
@@ -186,11 +175,7 @@ Sure it would be innapropriate to wear pyjamas to a video call with a client, bu
 
 There's no need to spend money on a work wardrobe, and there's no need to spend time ironing shirts, or shining shoes.
 
-<br><br>
-
 ## The Con's
-
-<hr>
 
 ### Loneliness
 
@@ -200,8 +185,6 @@ I've heard of people who work remotely who have a hard time making friends, and 
 
 I've rarely had this problem, as i have a few friends who also work remotely, and i'm a member of a few online communities where i can chat with other remote workers.
 
-<br>
-
 ### Distractions
 
 I have a dog, and he's a huge distraction.
@@ -209,11 +192,7 @@ I have a dog, and he's a huge distraction.
 He's very cute, and sometimes begs for attention while i'm working.
 Thankfully he's very well behaved, and he's happy to sleep on the couch most of the day.
 
-<br><br><br>
-
 ## Conclusion
-
-<hr>
 
 I've been working remotely for the past 4 years, and i've loved every minute of it.
 

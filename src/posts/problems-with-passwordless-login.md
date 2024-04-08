@@ -14,8 +14,6 @@ This is a great way to reduce friction for users, and can be more secure than tr
 
 However, there are some downsides to passwordless login that you should be aware of before implementing it in your app or website.
 
-<br>
-
 ## Issues with passwordless login
 
 - Many email providers have link scanning which can mangle magic links
@@ -35,15 +33,11 @@ However, there are some downsides to passwordless login that you should be aware
 
 - Getting your app approved by the app store can be more difficult, as they generally will not enter their email address to test the functionality
 
-<br>
-
 ### Link Scanning Issues
 
 Many email providers have a feature called link scanning, which scans the links in an email to check for malicious content. This can cause problems with passwordless login, as the magic link may be mangled, blocked, or potentially even clicked by the email provider before the user has a chance to click it: causing the link to no longer be valid.
 
 This is especially common with corporate email providers, which are more likely to have strict security policies in place.
-
-<br>
 
 ### Sender Reputation
 
@@ -56,8 +50,6 @@ Apple `@icloud` and `@me` email addresses are notorious for blocking emails due 
 In order to get around this, you may need to use a dedicated IP address, or a service that has a good reputation for sending emails.
 This may be costly, and involve paying for a higher tier of service.
 
-<br>
-
 ### Deep Linking
 
 Deep linking is the practice of linking to a specific page or resource within an app, rather than just opening the app. This is important for passwordless login, as you want the user to be taken directly to the app after clicking the magic link.
@@ -67,8 +59,6 @@ However, deep linking is still not fully supported by all mobile devices. Some d
 This can be frustrating for users, as they may not understand why the app is not opening, or may not know how to manually open the app.
 
 The differing behavior of deep linking on different devices has been a source of frustration for many developers, and is even one of the reasons why [Firebase has deprecated their dynamic link service](https://firebase.google.com/support/dynamic-links-faq#:~:text=ecosystem%20changes%20impacted%20our%20ability%20to%20provide%20a%20consistently%20stable%20experience%20for%20one%20of%20Firebase%20Dynamic%20Links%E2%80%99%20core%20features%20%2D%20giving%20app%20users%20a%20smooth%20transition%20into%20the%20app%20post%2Dinstall%2C%20regardless%20of%20platform.).
-
-<br>
 
 ### Backup Option
 
@@ -80,8 +70,6 @@ This effectively doubles your work, as you'll need to build and maintain two sep
 
 This can be a significant amount of work, especially if you're a small team or working on a tight deadline and in my opinion, defeats the purpose of passwordless login.
 
-<br>
-
 ### User Understanding
 
 Passwordless login can be difficult for less technical users to understand.
@@ -90,14 +78,10 @@ I've had to explain to many users how to use passwordless login, where to look f
 
 This is a blocker for many users, and can lead to a poor user experience if not handled correctly.
 
-<br>
-
 ### Testing
 
 In order to run automated tests on your passwordless login functionality, you'll need to have some kind of email inbox that you can access programmatically.
 Alternatively you can bypass the email sending part of the process, but this will not give you a true representation of how the functionality works in the real world.
-
-<br>
 
 ### App Store Approval
 
@@ -110,8 +94,6 @@ This can lead to your app being rejected from the app store, or having to go thr
 
 The way to fix this generally goes hand-in-hand with the backup option, as you'll need to provide a way for users to log in without using the magic link.
 
-<br>
-
 ## Conclusion
 
 While passwordless login can be a great way to reduce friction for users and improve security, there are some downsides that you should be aware of before implementing it in your app or website.
@@ -119,5 +101,3 @@ While passwordless login can be a great way to reduce friction for users and imp
 Make sure you understand the issues with link scanning, sender reputation, deep linking, and testing before you start building your passwordless login functionality.
 
 Significant callouts are to ensure you establish a good sender reputation well before your "go-live" date, and to have a backup option in place for users who can't or don't want to use the magic link.
-
-<br><br><br><br>

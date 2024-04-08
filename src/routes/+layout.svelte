@@ -20,11 +20,13 @@
 		font-size: 24pt;
 	}
 	:global(h2) {
+		margin-top: 1.5em;
 		text-decoration: none;
 		color: black;
 		font-size: 16pt;
 	}
 	:global(h3) {
+		margin-top: 2em;
 		text-decoration: none;
 		color: seagreen;
 		font-size: 12pt;
@@ -63,6 +65,7 @@
 		width: 100%;
 		--border: 1px solid lightslategray;
 		border-radius: 8px;
+		margin-bottom: 2em;
 
 		border-spacing: 0;
 		border-collapse: separate;
@@ -159,8 +162,33 @@
 		max-width: 100%;
 	}
 
+	:global(details) {
+		display: block;
+		margin-top: 1em;
+		padding: 8px;
+	}
+	:global(summary) {
+		margin-bottom: 8px;
+	}
+
+	:global(hr) {
+		border: 1px solid seagreen;
+	}
+
+	:global(blockquote) {
+		background-color: rgba(46, 139, 87, 0.1);
+		margin: 0;
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		color: rgb(14, 41, 26);
+		border-left: 4px solid seagreen;
+	}
+
 	.content {
 		padding: 16px;
+		margin-bottom: 3em;
 	}
 	@media only screen and (min-width: 900px) {
 		.content {

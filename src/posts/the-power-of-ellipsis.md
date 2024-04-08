@@ -58,9 +58,6 @@ This often occurs when trying to present data in a table like in the example bel
   </tbody>
  </table>
  
-<br>
-<br>
-
 This table looks clean and tidy on a large screen, but on smaller devices the large amount of text will quickly take up the entire window.  
 My favorite way to solve this problem is to only display the first few characters in the paragraph, and replace the overflow with "ellipsis..."
 
